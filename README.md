@@ -1,7 +1,7 @@
 # AI_Hardware_Project_Template
 
 ## Team Name: 
-(Enter your team name from Canvas)
+(6501-group10)
 
 ## Team Members:
 - Melika Morsali
