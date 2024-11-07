@@ -1,7 +1,7 @@
 # AI_Hardware_Project_Template
 
 ## Team Name: 
-(6501-group10)
+6501-group10
 
 ## Team Members:
 - Melika Morsali
@@ -9,10 +9,10 @@
 - Hasantha Ekanayake
 
 ## Project Title:
-(Performance Evaluation of CNN and Attention Layers on Open-Source Platforms)
+Performance Evaluation of CNN and Attention Layers on Open-Source Platforms
 
 ## Project Description:
-(This project focuses on the implementation and performance evaluation of quantized CNN models on virtual hardware accelerator platforms.)
+This project focuses on the implementation and performance evaluation of quantized CNN models on virtual hardware accelerator platforms.
 
 ## Key Objectives:
 - Deploy Quantized Convolutional Neural Networks (CNNs) on Open Source Platforms
