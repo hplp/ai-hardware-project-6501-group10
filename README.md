@@ -1,4 +1,4 @@
-# AI_Hardware_Project_Template
+# AI_Hardware_Project
 
 ## Team Name: 
 6501-group10
