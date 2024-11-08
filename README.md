@@ -1,7 +1,7 @@
 # AI_Hardware_Project
 
 ## Team Name: 
-6501-group10
+Q10
 
 ## Team Members:
 - Melika Morsali
