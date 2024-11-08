@@ -15,10 +15,15 @@ Performance Evaluation of CNN and Attention Layers on Open-Source Platforms
 This project focuses on the implementation and performance evaluation of quantized CNN models on virtual hardware accelerator platforms. The project consists of 5 main phases,
 
 Phase 1: Model Training
+
 Phase 2: Post-Training Quantization
+
 Phase 3: NVDLA Deployment
+
 Phase 4: Performance Benchmarking
+
 Phase 5: Extend this Approach to the Transformer, Multi-Head Self-Attention Layer
+
 
 ## Key Objectives:
 - Deploy Quantized Convolutional Neural Networks (CNNs) on Open Source Platforms
