@@ -1,6 +1,4 @@
-AI_Hardware_Project
-
-Milestones 
+# Milestones 
 
 Milestone 1: Model Training
 
