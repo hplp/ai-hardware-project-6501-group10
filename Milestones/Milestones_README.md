@@ -15,6 +15,8 @@ Trained model saved
     
 (Link - https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Training/Trained%20Models)
 
+
+
 ## Milestone 2: Post-Training Quantization
 
 Accuraccies of each quantized model was calculated. Table 1 shows the accuracies of each quantized models.
@@ -35,6 +37,8 @@ Exported quantized model to ONNX.
 - lenet_int8.onnx
 
 (Link - https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Training/Trained%20Models)
+
+
 
 ## Milestone 3: NVDLA Deployment
 
