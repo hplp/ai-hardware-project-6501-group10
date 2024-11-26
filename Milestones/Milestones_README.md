@@ -19,6 +19,8 @@ Accuraccies of each quantized model was calculated. Table 1 shows the accuracies
 
 <u>Table 1 : Accuracies of Quantized Models</u>
 
+<u>This section is underlined</u>
+
 | Quantized Model| Dataset | Accuracy |
 |------------------|-----------------|-----------------|
 |   lenet_int32.pth   | MNIST    | 98.17%    |
