@@ -36,5 +36,6 @@ Exported quantized model to ONNX.
 
 (Link - https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Training/Trained%20Models)
 
+# Milestone 2: Post-Training Quantization
 
 
