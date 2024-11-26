@@ -4,7 +4,7 @@
 
 LeNet CNN architechture was selected.
 
-Trained the model on MNIST data set using pytorch.
+Trained the model on MNIST data set using PyTorch.
 
 Trained model saved
 
@@ -27,5 +27,14 @@ Accuraccies of each quantized model was calculated. Table 1 shows the accuracies
 |   lenet_int16.pth   | MNIST    | 98.16%    |
 |   lenet_int8.pth   | MNIST    | 98.15%    |
 |   lenet_int4.pth   | MNIST    | 96.93%    |
+
+Exported quantized model to ONNX.
+
+lenet_int16.onnx
+lenet_int4.onnx
+lenet_int8.onnx
+
+(Link - https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Training/Trained%20Models)
+
 
 
