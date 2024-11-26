@@ -1,6 +1,6 @@
 # Milestones 
 
-#Milestone 1: Model Training
+## Milestone 1: Model Training
 
 LeNet CNN architechture was selected
 Trained the model on MNIST data set on pytorch
@@ -12,7 +12,7 @@ Trained model saved
   - lenet_int4.pth
 
 
-#Milestone 2: Post-Training Quantization
+## Milestone 2: Post-Training Quantization
 
 Accuraccies of each quantized model was calculated 
 
