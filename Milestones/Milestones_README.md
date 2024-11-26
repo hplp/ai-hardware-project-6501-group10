@@ -12,6 +12,7 @@ Trained model saved
   - lenet_int16.pth
   - lenet_int8.pth
   - lenet_int4.pth
+    
 (Link - https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Training/Trained%20Models)
 
 ## Milestone 2: Post-Training Quantization
