@@ -4,7 +4,7 @@
 
 LeNet CNN architechture was selected
 Trained the model on MNIST data set on pytorch
-Trained model saved
+Trained model saved https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Training/Trained%20Models
 
   - lenet_int32.pth
   - lenet_int16.pth
