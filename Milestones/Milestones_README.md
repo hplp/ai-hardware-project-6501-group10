@@ -19,7 +19,7 @@ Accuraccies of each quantized model was calculated. Table 1 shows the accuracies
 
 <u>Table 1 : Accuracies of Quantized Models</u>
 
-<u>This section is underlined</u>
+<u>This text will be underlined</u>
 
 | Quantized Model| Dataset | Accuracy |
 |------------------|-----------------|-----------------|
