@@ -28,7 +28,7 @@ Accuraccies of each quantized model was calculated. Table 1 shows the accuracies
 |   lenet_int8.pth   | MNIST    | 98.15%    |
 |   lenet_int4.pth   | MNIST    | 96.93%    |
 
-Exported quantized model to ONNX.
+Exported quantized model to # ONNX.
 
 - lenet_int16.onnx
 - lenet_int4.onnx
