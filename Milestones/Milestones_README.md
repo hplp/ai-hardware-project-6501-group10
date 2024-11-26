@@ -2,40 +2,67 @@
 
 ## Milestone 1: Model Training
 
-LeNet CNN architechture was selected.
+LeNet and AlexNet CNN architecture were selected.
 
-Trained the model on MNIST data set using PyTorch.
+We trained the LeNet model on the MNIST data set and the AlexNet model on the CIFAR-10 data set using PyTorch.
 
-Trained model saved
+Trained models saved
 
-  - lenet_int32.pth
-  - lenet_int16.pth
-  - lenet_int8.pth
-  - lenet_int4.pth
-    
+  - lenet_FP32.pth/alexnet_FP32.pth
+
+Table 1 shows the accuracies of LeNet and AlexNet.
+
+<u>Table 1: Accuracies of LeNet and AlexNet Models</u>
+
+| Quantized Model| Dataset | Accuracy |
+|-----------------|-----------------|-----------------|
+|   lenet_FP32.pth   | MNIST    | 98.17%    |
+|   alexnet_FP32.pth   | CIFAR-10    | ?    |
+
+
+  
+
+(Link - https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Training/LeNet_quantized_withONNX.ipynb)   
 (Link - https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Training/Trained%20Models)
 
 
 
 ## Milestone 2: Post-Training Quantization
 
-Accuraccies of each quantized model was calculated. Table 1 shows the accuracies of each quantized models.
+We do layer-by-layer int4, int8, and in16 quantization for the models.
+The accuracies of each quantized model were calculated. Table 2 shows the accuracies of each quantized model for LeNet. Table 3 shows the accuracies of each quantized model for AlexNet.
 
-<u>Table 1 : Accuracies of Quantized Models</u>
+Quantized models saved
+
+  - lenet_int16.pth/ alexnet_int16.pth
+  - lenet_int8.pth/ alexnet_int8.pth
+  - lenet_int4.pth/ alexnet_int4.pth
+
+
+<u>Table 2: Accuracies of Quantized LeNet Models</u>
 
 | Quantized Model| Dataset | Accuracy |
 |-----------------|-----------------|-----------------|
-|   lenet_int32.pth   | MNIST    | 98.17%    |
 |   lenet_int16.pth   | MNIST    | 98.16%    |
 |   lenet_int8.pth   | MNIST    | 98.15%    |
 |   lenet_int4.pth   | MNIST    | 96.93%    |
 
-Exported quantized model to ONNX.
+<u>Table 3: Accuracies of Quantized AlexNet Models</u>
 
-- lenet_int16.onnx
-- lenet_int4.onnx
-- lenet_int8.onnx
+| Quantized Model| Dataset | Accuracy |
+|-----------------|-----------------|-----------------|
+|   alexnet_int16.pth   | CIFAR-10    | ?    |
+|   alexnet_int8.pth   | CIFAR-10    | ?    |
+|   alexnet_int4.pth   | CIFAR-10    | ?    |
 
+
+We exported quantized models to ONNX and then will use them for deployment in Accelerator.
+
+- lenet_int16.onnx/ alexnet_int16.onnx
+- lenet_int8.onnx/ alexnet_int8.onnx
+- lenet_int4.onnx/ alexnet_int4.onnx
+
+(Link - https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Training/LeNet_quantized_withONNX.ipynb) 
 (Link - https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Training/Trained%20Models)
 
 
