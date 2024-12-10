@@ -57,7 +57,7 @@ Copy code
 [Command to run the project]
 
 
-## **5. Results
+## 5. Results
 Once the project is set up, you should:
 
 Access the application at [localhost/your-URL].
