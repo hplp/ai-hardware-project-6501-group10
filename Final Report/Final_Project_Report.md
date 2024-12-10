@@ -6,7 +6,7 @@
 -
 -
 
-## 1. Description
+## Description
 This project has two main objectives: one focused on software and the other on hardware.
 We use PyTorch to investigate how post-training quantization affects model accuracy. Specifically, we apply post-training quantization at different precision levels—INT8 and INT16—to evaluate how these adjustments influence model performance.
 On the hardware side, we employ open-source platforms like the NVDLA Simulator and Scale-Sim. With the NVDLA Simulator, we analyze execution time, and using Scale-Sim, we examine metrics such as utilization, mapping efficiency, cycles, and bandwidth.
@@ -14,7 +14,7 @@ By combining software and hardware analyses, we can assess both the accuracy and
 
 ---
 
-## 2. Objectives**
+## Objectives**
 The primary goals of this project are:
 1. Software Analysis with PyTorch: Investigate the impact of post-training quantization on model accuracy at different precision levels (INT8, INT16) using PyTorch.
 2. Hardware Analysis with NVDLA Simulator: Analyze execution time for quantized models deployed on the NVDLA simulator to understand their hardware performance.
@@ -24,13 +24,10 @@ The primary goals of this project are:
 
 ---
 
-## 3. Prerequisites**
-Before starting, ensure you have the following:
-- Installed Software: [e.g., Python 3.9+, Node.js, Docker]
-- Required Tools: [e.g., Git, Postman]
-- Accounts: [e.g., GitHub, API access keys]
+## Software Side**
 
----
+### Training Models
+
 
 ## 4. Installation and Setup**
 Follow these steps to duplicate the project on your machine:
