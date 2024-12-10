@@ -1,10 +1,11 @@
 # **Project Final Report**
 
 ## 1. Project Overview**
-- **Project Title:** [Performance Evaluation of CNN on Open-Source Platforms]
+- **Project Title:** Performance Evaluation of CNN on Open-Source Platforms
 - **Repository URL:** [GitHub Repository Link]
 - **Description:**  
-  This project has two main objectives: one focused on software and the other on hardware.
+
+This project has two main objectives: one focused on software and the other on hardware.
 
 We use PyTorch to investigate how post-training quantization affects model accuracy. Specifically, we apply post-training quantization at different precision levels—INT8 and INT16—to evaluate how these adjustments influence model performance.
 
