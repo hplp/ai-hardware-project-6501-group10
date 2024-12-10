@@ -20,8 +20,7 @@ The primary goals of this project are:
 2. Hardware Analysis with NVDLA Simulator: Analyze execution time for quantized models deployed on the NVDLA simulator to understand their hardware performance.
 3. Hardware Analysis with Scale-Sim: Evaluate metrics such as utilization, mapping efficiency, cycles, and bandwidth to understand how models perform in terms of hardware resource use.
 
-Expected outcomes include:
-- Examine the effects of quantization on accuracy, execution time, and hardware utilization.
+
 
 ---
 
