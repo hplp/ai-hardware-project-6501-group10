@@ -16,13 +16,12 @@ By combining software and hardware analyses, we can assess both the accuracy and
 
 ## 2. Objectives**
 The primary goals of this project are:
-1. [Objective 1]
-2. [Objective 2]
-3. [Objective 3]
+1. Software Analysis with PyTorch: Investigate the impact of post-training quantization on model accuracy at different precision levels (INT8, INT16) using PyTorch.
+2. Hardware Analysis with NVDLA Simulator: Analyze execution time for quantized models deployed on the NVDLA simulator to understand their hardware performance.
+3. Hardware Analysis with Scale-Sim: Evaluate metrics such as utilization, mapping efficiency, cycles, and bandwidth to understand how models perform in terms of hardware resource use.
 
 Expected outcomes include:
-- [Outcome 1]
-- [Outcome 2]
+- Examine the effects of quantization on accuracy, execution time, and hardware utilization.
 
 ---
 
