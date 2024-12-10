@@ -3,7 +3,7 @@
 
 ## Team Members
 - Melika Morsali Toshmnaloui
--
+- Kavish Nimnake Ranawella
 -
 
 ## Description
@@ -36,8 +36,12 @@ The details of their accuracy are presented in Table 1.
 
 ## Hardware Sides
 ### 1. NVDLA Simulator:
-Set up?
-challenge?
+![nvdla overview](https://github.com/hplp/ai-hardware-project-6501-group10/Final%20Report/Images/nvdla_flow.png "nvdla overview")
+
+![nvdla virtual](https://github.com/hplp/ai-hardware-project-6501-group10/Final%20Report/Images/nvdla_vp.png "nvdla virtual")
+
+![nvdla results](https://github.com/hplp/ai-hardware-project-6501-group10/Final%20Report/Images/nvdla_results.png "nvdla results")
+
 ### 2. Scale-Sim:
 -LeNet??
 -AlexNet??
