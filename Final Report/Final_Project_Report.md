@@ -27,7 +27,8 @@ The primary goals of this project are:
 ## Software Side
 
 ### Training Models
-In this project, we trained three models—LeNet, AlexNet, and EfficientNet—using full-precision FP32 with PyTorch. The Jupyter Notebook for these models can be found here. The details of their accuracy are presented in Table 1.
+In this project, we trained three models—LeNet, AlexNet, and EfficientNet—using full-precision FP32 with PyTorch. The Jupyter Notebook files for these models can be found [here](path/to/your/file.extension)
+The details of their accuracy are presented in Table 1.
 
 ### Post-Training Quantization 
 
