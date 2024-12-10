@@ -1,6 +1,6 @@
 # **Project Final Report**
 
-## **1. Project Overview**
+## 1. Project Overview**
 - **Project Title:** [Project Name]
 - **Repository URL:** [GitHub Repository Link]
 - **Description:**  
@@ -8,7 +8,7 @@
 
 ---
 
-## **2. Objectives**
+## 2. Objectives**
 The primary goals of this project are:
 1. [Objective 1]
 2. [Objective 2]
@@ -20,7 +20,7 @@ Expected outcomes include:
 
 ---
 
-## **3. Prerequisites**
+## 3. Prerequisites**
 Before starting, ensure you have the following:
 - Installed Software: [e.g., Python 3.9+, Node.js, Docker]
 - Required Tools: [e.g., Git, Postman]
@@ -28,7 +28,7 @@ Before starting, ensure you have the following:
 
 ---
 
-## **4. Installation and Setup**
+## 4. Installation and Setup**
 Follow these steps to duplicate the project on your machine:
 
 
@@ -68,7 +68,7 @@ Copy code
 [example log output]
 
 
-## **6. Features
+## 6. Features
 This project provides the following features:
 
 Feature 1: [Description of the feature and its purpose]
@@ -76,21 +76,21 @@ Feature 2: [Description]
 Feature 3: [Description]
 
 
-## **7. Known Issues
+## 7. Known Issues
 Current Issues
 Issue 1: [Description and how it impacts the project]
 Workaround/Fix: [Steps or methods to fix the issue]
 Issue 2: [Description]
 
 
-## **8. Future Improvements
+## 8. Future Improvements
 Potential enhancements include:
 
 [Improvement 1 with reason]
 [Improvement 2 with reason]
 
 
-## **9. Testing
+## 9. Testing
 How to Run Tests
 To validate the project, use:
 
