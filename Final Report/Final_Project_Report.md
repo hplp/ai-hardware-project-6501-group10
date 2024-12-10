@@ -14,7 +14,7 @@ By combining software and hardware analyses, we can assess both the accuracy and
 
 ---
 
-## Objectives**
+## Objectives
 The primary goals of this project are:
 1. Software Analysis with PyTorch: Investigate the impact of post-training quantization on model accuracy at different precision levels (INT8, INT16) using PyTorch.
 2. Hardware Analysis with NVDLA Simulator: Analyze execution time for quantized models deployed on the NVDLA simulator to understand their hardware performance.
@@ -24,65 +24,24 @@ The primary goals of this project are:
 
 ---
 
-## Software Side**
+## Software Side
 
 ### Training Models
+In this project, we trained three models—LeNet, AlexNet, and EfficientNet—using full-precision FP32 with PyTorch. The Jupyter Notebook for these models can be found here. The details of their accuracy are presented in Table 1.
 
+### Post-Training Quantization 
 
-## 4. Installation and Setup**
-Follow these steps to duplicate the project on your machine:
+### ONNX conversion 
 
-
-Step 2: Install Dependencies
-Run the following commands based on your environment:
-
-bash
-Copy code
-[Command for backend installation]
-[Command for frontend installation]
-
-
-Step 3: Set Up Environment Variables
-Create a .env file in the project directory.
-Add the following variables:
-plaintext
-Copy code
-VARIABLE_NAME=VALUE
-
-
-Step 4: Run the Project
-Start the application using:
-
-bash
-Copy code
-[Command to run the project]
-
-
-## 5. Results
-Once the project is set up, you should:
-
-Access the application at [localhost/your-URL].
-Perform [task or action] to see [result].
-View logs or outputs:
-bash
-Copy code
-[example log output]
-
-
-## 6. Features
-This project provides the following features:
-
-Feature 1: [Description of the feature and its purpose]
-Feature 2: [Description]
-Feature 3: [Description]
-
-
-## 7. Known Issues
-Current Issues
-Issue 1: [Description and how it impacts the project]
-Workaround/Fix: [Steps or methods to fix the issue]
-Issue 2: [Description]
-
+## Hardware Sides
+### 1. NVDLA Simulator:
+Set up?
+challenge?
+### 2. Scale-Sim:
+-LeNet??
+-AlexNet??
+-EfficientNet??
+## Challenges and Takeaways
 
 ## 8. Future Improvements
 Potential enhancements include:
@@ -90,16 +49,5 @@ Potential enhancements include:
 [Improvement 1 with reason]
 [Improvement 2 with reason]
 
-
-## 9. Testing
-How to Run Tests
-To validate the project, use:
-
-bash
-Copy code
-[Command to run tests]
-Known Bugs During Testing
-[Bug 1 and its behavior]
-[Bug 2]
 
 
