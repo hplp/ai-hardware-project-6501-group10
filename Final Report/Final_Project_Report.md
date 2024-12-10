@@ -1,16 +1,9 @@
-# **Project Final Report**
+# **Performance Evaluation of CNN on Open-Source Platforms**
 
-## 1. Project Overview**
-- **Project Title:** Performance Evaluation of CNN on Open-Source Platforms
-- **Repository URL:** [GitHub Repository Link]
-- **Description:**  
-
+## 1. Description**
 This project has two main objectives: one focused on software and the other on hardware.
-
 We use PyTorch to investigate how post-training quantization affects model accuracy. Specifically, we apply post-training quantization at different precision levels—INT8 and INT16—to evaluate how these adjustments influence model performance.
-
 On the hardware side, we employ open-source platforms like the NVDLA Simulator and Scale-Sim. With the NVDLA Simulator, we analyze execution time, and using Scale-Sim, we examine metrics such as utilization, mapping efficiency, cycles, and bandwidth.
-
 By combining software and hardware analyses, we can assess both the accuracy and efficiency of deploying these models on hardware.
 
 ---
