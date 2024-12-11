@@ -82,11 +82,13 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
 
 #### Results 
 
--LeNet
+## Models Performance Table
 
--AlexNet
-
--EfficientNet
+| **Models**      | **Cycles** | **Overall Utilization (%)** | **Mapping Efficiency (%)** |
+|------------------|-----------|-----------------------------|----------------------------|
+| LeNet           | 20,996    | 11.42                      | 80.08                     |
+| AlexNet         | 738,385   | 91.45                      | 96.05                     |
+| EfficientNet    | 735,114   | 25.66                      | 58.85     
 
 ## Challenges and Takeaways
 
