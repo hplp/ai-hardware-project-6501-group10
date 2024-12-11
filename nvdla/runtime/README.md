@@ -1,10 +1,10 @@
 # **NVDLA Runtime**
 
 All the prebuilt files needed inside the simululator is available [here](https://github.com/nvdla/sw/tree/master/prebuilt/arm64-linux). The important files are,
-- drm.ko - User-Mode Driver (UMD)
-- opendla_1.ko - Kernel-Mode Driver (KMD) for ``nv_full`` config.
-- opendla_2.ko - Kernel-Mode Driver (KMD) for ``nv_large``/``nv_small`` config.
-- nvdla_runtime - Runtime application
+- ``drm.ko`` - User-Mode Driver (UMD)
+- ``opendla_1.ko`` - Kernel-Mode Driver (KMD) for ``nv_full`` config.
+- ``opendla_2.ko`` - Kernel-Mode Driver (KMD) for ``nv_large``/``nv_small`` config.
+- ``nvdla_runtime`` - Runtime application
 
 The NVDLA loadables, images used and any SW regression loadables (only needed for AWS FPGA) also needs to copied to accessible folder.
 
