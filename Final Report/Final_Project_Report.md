@@ -45,12 +45,12 @@ The details of their accuracy are presented in Table 1.
 | AlexNet         | CIFAR-10   | 83.73%  |                    
 | EfficientNet    | CIFAR-10  | 91.94%  |  
 
-# Model Training Metrics
+### Model Training Metrics
 
-## Loss vs Epochs
+#### Loss vs Epochs
 ![Loss vs Epochs](images/output(5).png)
 
-## Accuracy vs Epochs
+#### Accuracy vs Epochs
 ![Accuracy vs Epochs](images/output(4).png)
 
 ### Post-Training Quantization 
