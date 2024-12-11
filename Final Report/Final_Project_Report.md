@@ -41,8 +41,9 @@ The details of their accuracy are presented in Table 1.
 
 ### Post-Training Quantization 
 
-We implemented post-training quantization, which applies quantization after the model has been trained. Our method uses layer-wise quantization, meaning that each layer is quantized independently. Both the inputs and weights are quantized to reduce memory usage and computational demands. Importantly, each tensor has its own scaling factor, which allows for precise mapping of values into the quantized range at the layer level.
+We implemented post-training quantization, which applies quantization after the model has been trained. Our approach utilizes layer-wise quantization, meaning that each layer is quantized independently. Both the inputs and weights are quantized to reduce memory usage and computational demands. Each tensor has its own scaling factor, allowing for precise mapping of values into the quantized range at the layer level.
 
+However, for EfficientNet, due to its more complex structure, we could not utilize layer-wise quantization. Instead, we employed PyTorch functions to quantize the models. Additionally, we used the same approach for AlexNet on the CIFAR-10 dataset, given its complexity.
 ### ONNX conversion 
 
 ## Hardware Sides
