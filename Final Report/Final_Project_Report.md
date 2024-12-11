@@ -100,13 +100,13 @@ However, NVIDIA has stopped maintaining these 5-6 years ago.
 </p>
 
 This virtual platform simulates a QEMU CPU model (ARMv8) with a SystemC model of NVDLA. They have offered 3 predefined hardware configuration for NVDLA as follows,
-- nv_full
+- ``nv_full``
     - Full precision version (tested for INT8 and FP16 precisions).
     - Has 2048 8-bit MACs (1024 16-bit fixed- or floating-point MACs).
-- nv_large (int8/fp16)
+- ``nv_large``
     - Deprecated version (replaced by nv_full).
     - Supports INT8 and FP16 precisions.
-- nv_small
+- ``nv_small``
     - Targets smaller workload.
     - Very limited feature support.
     - Has 64 8-bit MACs.
@@ -174,6 +174,21 @@ The runtime application can also be changed and built again. We tried this, but 
 Further details on this can be found [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/runtime).
 
 #### Results
+
+Since we deployed only on a virtual simulator platform, we only have results for the single image simulations. These simulations display the execution time on the terminal at the end of the simulations. An output.dimg file will also be created with the output of the model. The execution times we got are as follows,
+
+| **Model**     | **FP16**       | **INT8**       | 
+|---------------|----------------|----------------|
+| LeNet         | 5,633 hrs      | 10,401 hrs     |                    
+| ResNet-50     | 5,743,922 hrs  | 4,834,791 hrs  |
+
+These numbers are way off. Obviously, the simulation didn't run for 5 million hours. The LeNet finishes within 10 minutes and ResNet-50 run for upto 5 hours. Instead of looking at the absolute values, we compared the relative values.
+
+The ResNet-50 has some improvement when running on INT8 quantized mode, but the performance has worsened for LeNet. We assumed that this is because LeNet is a very small model and the overhead introduced to the NVDLA by handling a fixed-point quantization outweighs any performance gained by lighter computations. There might also be the possibility that LeNet is even too small to consume all 2048 8-bit MACs available in the ``nv_full`` configuration.
+
+The quantization is handled by the NVDLA compiler itself. So, we can't expect a different output unless we make changes to the NVDLA framework.
+
+The terminal outputs of these simulations along with the loadables used are given [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/runtime).
 
 ### 2. Scale-Sim:
 
