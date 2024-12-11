@@ -36,17 +36,25 @@ The details of their accuracy are presented in Table 1.
 
 ## Hardware Sides
 ### 1. NVDLA Simulator:
-![nvdla overview](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_flow.png "nvdla overview")
 
-![nvdla virtual](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_vp.png "nvdla virtual")
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_flow.png" alt="nvdla overview" title="nvdla overview" width="500">
+</p>
 
-![nvdla results](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_results.png "nvdla results")
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_vp.png" alt="nvdla virtual" title="nvdla virtual" width="500">
+</p>
 
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_results.png" alt="nvdla results" title="nvdla results" width="500">
+</p>
 ### 2. Scale-Sim:
 
 Scale-sim (Systolic CNN Accelerator Simulator) is a lightweight and highly configurable simulator that gives valuable insights into hardware-level performance, enabling efficient testing and deployment of deep neural networks (DNNs) models without access to physical hardware. Below figure illustrates the architecture and workflow of SCALE-Sim. 
 
-![scale-sim](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/scale-sim.png "scale-sim")
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/scale-sim.png" alt="scale-sim" title="scale-sim" width="500" height="300">
+</p>
 
 
 -LeNet??
