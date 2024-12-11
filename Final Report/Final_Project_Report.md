@@ -78,6 +78,10 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 | EfficientNet   | CIFAR-10   | 92.53%     | 92.53% / 32.82%  | 92.52% / 10.0%    |  Dynamic quantization retains accuracy; manual quantization struggles.       |
 
 
+- Model Accuracy Across Quantization Levels
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output%20(6).png"  width="500">
+</p>
 ---
 
 #### **Impact of Quantization**
