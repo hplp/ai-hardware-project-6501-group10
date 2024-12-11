@@ -389,7 +389,7 @@ Potential enhancements include:
 
 
 ## 7. References
-Columbia University. (n.d.). Third-party accelerator integration guide. Retrieved December 9, 2024, from https://www.esp.cs.columbia.edu/docs/thirdparty_acc/thirdparty_acc-guide/
+Columbia University. (n.d.). Guide – How to: integrate a third-party accelerator (e.g. NVDLA). Retrieved December 9, 2024, from https://www.esp.cs.columbia.edu/docs/thirdparty_acc/thirdparty_acc-guide/
 
 NVIDIA. (n.d.). NVDLA: NVIDIA Deep Learning Accelerator. Retrieved December 9, 2024, from https://nvdla.org
 
