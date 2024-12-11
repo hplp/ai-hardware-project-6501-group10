@@ -370,6 +370,14 @@ Formula:
 
 > **SRAM Bandwidth (words/cycle)** = Words Transferred per Cycle (read/write)
 
+Table: Comparison of SRAM Bandwidth
+
+| Models       | Avg FILTER SRAM BW (%) | Avg IFMAP SRAM BW (%) | Avg OFMAP SRAM BW (%) |
+|--------------|-------------------------|------------------------|------------------------|
+| LeNet        | 0.89                   | 1.07                  | 0.97                  |
+| AlexNet      | 30.47                  | 29.26                 | 0.53                  |
+| EfficientNet | 13.47                  | 2.32                  | 8.50 
+
 Comparison of SRAM Bandwidth for models
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/Filter SRAM BW.png" alt=" " title="cyles" width="300" height= "200">
@@ -389,6 +397,14 @@ Formula:
 
  > **DRAM Bandwidth (words/cycle)** =
   (Bus Width (bits)/ Word Size (bits)) × (DRAM Clock Speed /Array Clock Speed)
+
+Table: Comparison of DRAM Bandwidth
+
+| Models       | Avg FILTER DRAM BW (%) | Avg IFMAP DRAM BW (%) | Avg OFMAP DRAM BW (%) |
+|--------------|-------------------------|------------------------|------------------------|
+| LeNet        | 4.35                   | 1.07                  | 7.97                  |
+| AlexNet      | 6.39                   | 8.99                  | 32.00                 |
+| EfficientNet | 4.66                   | 5.81                  | 28.53
 
 Comparison of DRAM Bandwidth for models 
 <p align="center">
