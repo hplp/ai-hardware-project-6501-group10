@@ -125,7 +125,8 @@ This analysis compares the effects of quantization (INT8 and INT16) across vario
 Quantization is a powerful technique to reduce model size and inference latency. However, its success depends on the dataset, model architecture, and quantization method. Dynamic quantization outperforms manual approaches, especially on complex datasets like CIFAR-10. Models like LeNet and AlexNet demonstrate strong resilience to quantization, making them suitable for edge and resource-constrained environments.
 
 ### ONNX conversion 
-
+ we can convert our trained model into ONNX format, which stands for Open Neural Network Exchange. ONNX is an open format that makes it easy to move models between different AI frameworks, like PyTorch, Keras, and others, which you see on the left.
+ONNX acts as a bridge in the middle, letting us take a model trained in one framework and deploy it on various devices.
 ## 4. Hardware Sides
 ### 1. NVDIA Deep Learning Accelerator (NVDLA):
 
