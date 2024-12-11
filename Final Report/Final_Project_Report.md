@@ -324,8 +324,10 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
 
 
 #### SRAM Bandwidth
-•	Definition: SRAM bandwidth refers to the rate at which data can be read from or written to the on-chip SRAM buffers (e.g., IFMAP SRAM, Filter SRAM, OFMAP SRAM) in words per cycle.
-•	In SCALE-Sim, SRAM bandwidth depends on the systolic array configuration and the dataflow being simulated (e.g., weight-stationary, output-stationary).
+
+Definition: SRAM bandwidth refers to the rate at which data can be read from or written to the on-chip SRAM buffers (e.g., IFMAP SRAM, Filter SRAM, OFMAP SRAM) in words per cycle.
+
+In SCALE-Sim, SRAM bandwidth depends on the systolic array configuration and the dataflow being simulated (e.g., weight-stationary, output-stationary).
 
 **Formula:**
 
@@ -342,8 +344,10 @@ Comparison of SRAM Bandwidth for models
 
 
 #### DRAM Bandwidth
-•	Definition: DRAM bandwidth refers to the rate at which data can be read from or written to the off-chip DRAM memory in words per cycle.
-•	It is influenced by the size of the off-chip data transfer, the DRAM bus width, and the DRAM-to-SRAM communication latency.
+
+Definition: DRAM bandwidth refers to the rate at which data can be read from or written to the off-chip DRAM memory in words per cycle.
+
+It is influenced by the size of the off-chip data transfer, the DRAM bus width, and the DRAM-to-SRAM communication latency.
 
 
 **Formula:**
