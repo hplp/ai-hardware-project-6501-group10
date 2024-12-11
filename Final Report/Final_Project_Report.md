@@ -213,7 +213,7 @@ The runtime capabilities in this platform is limited to running the simulation f
 
 Here as you can see, the QEMU CPU model is simulated on a OpenDLA Virtual Platform. However, instead of a SystemC model, NVDLA is deployed on the FPGA in RTL.
 
-The runtime capabilities are increased on this platform. We can run regressions and collect data to evaluate the performance and energy efficiency of the NVDLA design. Here are some data collected and displayed on the [NVDLA website](https://nvdla.org/primer.html),
+The runtime capabilities are increased on this platform. We can run hardware regressions and collect data to evaluate the performance and energy efficiency of the NVDLA design. Here are some data collected and displayed on the [NVDLA website](https://nvdla.org/primer.html),
 
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_results.png" alt="nvdla results" title="nvdla results" width="500">
@@ -235,10 +235,11 @@ After starting the virtual simulator platform, the UMD and KMD should be loaded.
     - It runs a network test to generate the output for given image.
     - Will give the execution time along with the output generated.
     - The nv_full configuration expects a 4-channel image as the input image.
-3. Run regressions (did not test).
-    - The regressions cannot be run on the virtual platform used (needs an FPGA implementation).
-4. Run in server mode (did not test).
+3. Run in server mode (did not test).
     - Can run inference jobs on the NVDLA by connecting to it as a client.
+4. Run hardware regressions (did not test).
+    - Not possible with the same runtime application used by the previous options (the flow is different).
+    - The hardware regressions cannot be run on any virtual platform (needs an FPGA implementation).
 
 The runtime application can also be changed and built again. We tried this, but it gives errors.
 
