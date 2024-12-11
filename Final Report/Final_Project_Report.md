@@ -327,8 +327,11 @@ SRAM Bandwidth
 •	Definition: SRAM bandwidth refers to the rate at which data can be read from or written to the on-chip SRAM buffers (e.g., IFMAP SRAM, Filter SRAM, OFMAP SRAM) in words per cycle.
 •	In SCALE-Sim, SRAM bandwidth depends on the systolic array configuration and the dataflow being simulated (e.g., weight-stationary, output-stationary).
 
-Formula:
-SRAM Bandwidth (words/cycle)=Words Transferred per Cycle (read/write).\text{SRAM Bandwidth (words/cycle)} = \text{Words Transferred per Cycle (read/write)}.SRAM Bandwidth (words/cycle)=Words Transferred per Cycle (read/write).
+**Formula:**
+
+<p>
+  <strong>SRAM Bandwidth (words/cycle)</strong> = Words Transferred per Cycle (read/write).
+</p>
 
 Comparison of SRAM Bandwidth for models
 <p align="center">
@@ -342,9 +345,13 @@ DRAM Bandwidth
 •	Definition: DRAM bandwidth refers to the rate at which data can be read from or written to the off-chip DRAM memory in words per cycle.
 •	It is influenced by the size of the off-chip data transfer, the DRAM bus width, and the DRAM-to-SRAM communication latency.
 
-Formula: 
 
-DRAM Bandwidth (words/cycle)=Word Size (bits)Bus Width (bits)×Array Clock SpeedDRAM Clock Speed.
+**Formula:**
+
+<p>
+  <strong>DRAM Bandwidth (words/cycle)</strong> =
+  (<i>Bus Width (bits)</i> / <i>Word Size (bits)</i>) × (<i>DRAM Clock Speed</i> / <i>Array Clock Speed</i>)
+</p>
 
 Comparison of DRAM Bandwidth for models 
 <p align="center">
