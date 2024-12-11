@@ -48,10 +48,15 @@ The details of their accuracy are presented in Table 1.
 ### Model Training Metrics
 
 #### Loss vs Epochs
-![Loss vs Epochs](images/output(5).png)
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(5).png">
+</p>
 
 #### Accuracy vs Epochs
-![Accuracy vs Epochs](images/output(4).png)
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(4).png">
+</p>
+
 
 ### Post-Training Quantization 
 
