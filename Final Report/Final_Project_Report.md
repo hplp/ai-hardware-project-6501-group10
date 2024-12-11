@@ -447,9 +447,9 @@ All the results and files for Scale-Sim are included in this folder [here](https
 ---
 
 ## 6. Conclusion
-This project evaluated CNN performance using software-based quantization and hardware simulations on open-source platforms. It showed that post-training quantization can reduce computation and memory needs while maintaining accuracy for simpler models. Tools like NVDLA and Scale-Sim provided insights into execution time, utilization, and efficiency.
+This project involves analysing CNN performance using software-based quantization and hardware simulations on open-source platforms. The results illustrated that the post-training quantization can reduce computation and memory needs while maintaining accuracy for simpler models. For hardware simulations, tools like NVDLA and Scale-Sim provided insights into execution time, utilization, and efficiency.
 
-While challenges like outdated tools and complex setups were encountered, the project demonstrated the potential of combining software and hardware analyses for efficient model deployment. These findings provide a foundation for future improvements in quantization techniques and hardware simulation workflows.
+During this project some challenges were encountered such as outdated tools and complex setups. Despite of these challenges, the project demonstrated the potential of combining software and hardware analyses for efficient model deployment. The results and findings of this project provide a clear way forward for possible future improvements in quantization techniques and hardware simulation workflows.
 
 ---
 
