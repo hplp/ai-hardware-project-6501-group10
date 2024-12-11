@@ -68,7 +68,6 @@ This analysis compares the effects of quantization (INT8 and INT16) across vario
 
 ---
 
-## Key Insights
 
 ### Impact of Quantization
 - **LeNet (MNIST)**: Minimal performance degradation, even with INT8. The simplicity of the model and dataset makes it resilient to quantization.
