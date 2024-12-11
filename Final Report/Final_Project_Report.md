@@ -69,7 +69,7 @@ This analysis compares the effects of quantization (INT8 and INT16) across vario
 
 ---
 
-## Table 2: Summary of Results
+#### Table 2: Summary of Results
 
 | **Model**       | **Dataset** | **FP32 Accuracy** | **INT16 Accuracy** | **INT8 Accuracy** | **Notes**                                                                 |
 |------------------|-------------|--------------------|---------------------|--------------------|---------------------------------------------------------------------------|
@@ -82,45 +82,45 @@ This analysis compares the effects of quantization (INT8 and INT16) across vario
 ---
 
 
-### Impact of Quantization
+#### Impact of Quantization
 - **LeNet (MNIST)**: Minimal performance degradation, even with INT8. The simplicity of the model and dataset makes it resilient to quantization.
 - **AlexNet (MNIST)**: Slight accuracy drop in INT8 and INT16. The model handles MNIST well, even with reduced precision.
 - **AlexNet (CIFAR-10)**: Dynamic quantization retains accuracy, but manual per-layer quantization suffers from a significant drop. CIFAR-10's complexity magnifies the challenges of poorly optimized quantization.
 
-### Quantization Approaches
+#### Quantization Approaches
 - **Manual Per-Layer Quantization**:
   - Accuracy depends heavily on correct scaling and rounding. Errors propagate across layers, leading to accuracy drops, especially on complex datasets like CIFAR-10.
 - **Dynamic Quantization (PyTorch)**:
   - Handles layer-wise quantization automatically, including scaling, rounding, and optimization. Performs significantly better, especially on complex datasets.
 
-### Dataset Complexity
+#### Dataset Complexity
 - **MNIST**: As a simple dataset, it is highly tolerant to quantization. Even manual approaches work well.
 - **CIFAR-10**: Requires more sophisticated quantization techniques like dynamic quantization due to its complexity and higher resolution.
 
-### Model Architecture
+#### Model Architecture
 - **LeNet**: Simple architecture ensures resilience to aggressive quantization (e.g., INT8).
 - **AlexNet**: Shows resilience on MNIST but needs optimized quantization for CIFAR-10.
 - **EfficientNet**: Likely robust due to its advanced architecture, but details were unavailable in this analysis.
 
 ---
 
-## Discussion
+### Discussion
 
-### Quantization Suitability
+#### Quantization Suitability
 - INT8 provides a good trade-off between accuracy and computational efficiency. INT16 closely matches FP32 but offers less computational advantage.
 - Manual quantization should only be used for exploratory or learning purposes. Optimized frameworks like PyTorch's quantization are highly recommended for practical applications.
 
-### Recommendations
+#### Recommendations
 - Use dynamic quantization for complex models and datasets.
 - For simpler tasks, manual quantization may suffice but requires careful implementation to avoid severe accuracy drops.
 
-### Future Directions
+#### Future Directions
 - Explore quantization-aware training (QAT) for even better accuracy retention.
 - Investigate hybrid quantization approaches, where sensitive layers (e.g., first and last layers) retain higher precision (e.g., FP16) while others use INT8.
 
 ---
 
-## Conclusion
+### Conclusion
 
 Quantization is a powerful technique to reduce model size and inference latency. However, its success depends on the dataset, model architecture, and quantization method. Dynamic quantization outperforms manual approaches, especially on complex datasets like CIFAR-10. Models like LeNet and AlexNet demonstrate strong resilience to quantization, making them suitable for edge and resource-constrained environments.
 
