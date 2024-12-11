@@ -74,8 +74,8 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 | LeNet          | MNIST      | 98.16%            | 98.16%             | 98.06%            | Minimal degradation in INT8.                 |
 | AlexNet        | MNIST      | 99.19%            | 98.64%             | 98.60%            | Robust performance on MNIST.                 |
 | AlexNet        | CIFAR-10   | 83.73%            | 83.73% / 50.00%    | 83.7% / 49.83%   | Dynamic quantization retains accuracy; manual suffers. |
-| EfficientNet   | MNIST      | 96.73%      | 96.73%  | 96.7%    |                                              |
-| EfficientNet   | CIFAR-10   | 92.53%     | 92.53%   | 92.52%    |                                              |
+| EfficientNet   | MNIST      | 96.73%      | 96.73% / 27.35%  | 96.7% / 9.74%    |  Dynamic quantization retains accuracy; manual quantization struggles.   |
+| EfficientNet   | CIFAR-10   | 92.53%     | 92.53% / 32.82%  | 92.52% / 10.0%    |  Dynamic quantization retains accuracy; manual quantization struggles.       |
 
 
 ---
@@ -84,9 +84,7 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 
 - **LeNet (MNIST)**: Minimal performance degradation in INT8, with INT16 matching FP32. Its simple architecture and dataset make it resilient to quantization.
 - **AlexNet (MNIST)**: Shows a slight accuracy drop in INT16 and INT8. Performs robustly on MNIST even with reduced precision.
-- **AlexNet (CIFAR-10)**: Dynamic quantization retains accuracy, but manual quantization causes a significant drop due to the dataset's complexity.
-- **EfficientNet (MNIST)**: INT16 and INT8 quantization result in a sharp drop, likely due to the advanced and complex architecture.
-- **EfficientNet (CIFAR-10)**: Faces substantial degradation in INT16 and INT8, indicating that the quantization method needs further optimization for complex models and datasets.
+- **AlexNet (CIFAR-10), EfficientNet (MNIST, CIFAR-10)**: Dynamic quantization retains accuracy, but manual quantization causes a significant drop due to the dataset's complexity.
 
 ---
 
