@@ -76,6 +76,8 @@ The calibtable expects a .json file with the scale values used for the quantizat
 
 An NVDLA loadable (.nvdla) is created during compilation which is used during runtime.
 
+We tried this compilation for multiple online available Caffe models. But, only 2 of them compilled properly. Most of them failed because the .prototxt was not compatible with the NVDLA compiler.
+
 Further details on this can be found [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/compilation).
 
 #### Deployment
