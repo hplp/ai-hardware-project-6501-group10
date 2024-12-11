@@ -258,9 +258,9 @@ These numbers are way off. Obviously, the simulation didn't run for 5 million ho
 
 The ResNet-50 has some improvement when running on INT8 quantized mode, but the performance has worsened for LeNet. We assumed that this is because LeNet is a very small model and the overhead introduced to the NVDLA by handling a fixed-point quantization outweighs any performance gained by lighter computations. There might also be the possibility that LeNet is even too small to consume all 2048 8-bit MACs available in the ``nv_full`` configuration. ``nv_small`` configuration might be a better fit for the LeNet, but we cannot do this comparison on ``nv_small`` because it doesn't support FP16 precision.
 
-The quantization is handled by the NVDLA compiler itself. So, we can't expect a different output unless we make changes to the NVDLA framework.
-
 The terminal outputs of these simulations along with the loadables used are given [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/runtime).
+
+The quantization is handled by the NVDLA compiler itself. So, we can't expect a different output unless we make changes to the NVDLA framework.
 
 ### 2. Scale-Sim:
 
