@@ -35,19 +35,132 @@ The details of their accuracy are presented in Table 1.
 ### ONNX conversion 
 
 ## Hardware Sides
-### 1. NVDLA Simulator:
+### 1. NVDIA Deep Learning Accelerator (NVDLA):
 
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_flow.png" alt="nvdla overview" title="nvdla overview" width="500">
 </p>
 
+#### Compiler
+Unfortunately, NVIDIA hasn't added support for ONNX models. Currently, it only support Caffe models.
+
+The NVDLA compiler needs the following files from the Caffe models,
+- .prototxt - contains the architecture of the Caffe model
+- .caffemodel - contains the trained weights of the Caffe model
+
+It also accepts optional arguements to customize the compilation process,
+- cprecision (fp16/int8) - compute precision
+- configtarget (nv_full/nv_large/nv_small) - target NVDLA configuration
+- calibtable - calibration table for INT8 networks
+- quantizationMode (per-kernel/per-filter) - quantization mode for INT8
+- batch - batch size
+- informat (ncxhwx/nchw/nhwc) - format of the input matrix
+- profile (basic/default/performance/fast-math) - computation profile
+
+NVIDIA offers multiple predefined NVDLA configurations. More details will provided under the virtual platform.
+
+The calibtable expects a .json file with the scale values used for the quantization. TensorRT can be used to dump the scale values to text file ([link](https://github.com/NVIDIA/TensorRT/tree/release/5.1/samples/opensource/sampleINT8) explains this) and [calib_txt_to_json.py](https://github.com/nvdla/sw/tree/master/umd/utils/calibdata/calib_txt_to_json.py) can be used to convert this to NVDLA JSON format.
+
+An NVDLA loadable (.nvdla) is created during compilation which is used during runtime.
+
+Further details on this can be found [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/compilation).
+
+#### Deployment
+
+There are multiple options available to deploy NVDLA,
+- GreenSocs QBox based Virtual Simulator
+- Synopsys VDK based Virtual Simulator
+- Verilator based Virtual Simulator
+- FireSim FPGA-accelerated Simulator (AWS FPGA)
+- Emulation on Amazon EC2 “F1” environment (AWS FPGA)
+
+Synopsys needs licensed tools. Verilator is open source, but NVDLA was not properly documented to use this. Out of the virtual simulators, GreenSocs QBox is the most documented free simulator available. We have more control over our environment when we use this.
+
+FireSim is still a simulator, but it is accelerated on an FPGA in Amazon EC2 "F1" instance. Instead of running the simulator on the FPGA, we can also deploy the NVDLA hardware design on that FPGA, which is the fifth option.
+
+However, NVIDIA has stopped maintaining these 5-6 years ago.
+
+##### GreenSocs QBox based Virtual Simulator
+
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_vp.png" alt="nvdla virtual" title="nvdla virtual" width="500">
 </p>
 
+This virtual platform simulates a QEMU CPU model (ARMv8) with a SystemC model of NVDLA. They have offered 3 predefined hardware configuration for NVDLA as follows,
+- nv_full
+    - Full precision version (tested for INT8 and FP16 precisions).
+    - Has 2048 8-bit MACs (1024 16-bit fixed- or floating-point MACs).
+- nv_large (int8/fp16)
+    - Deprecated version (replaced by nv_full).
+    - Supports INT8 and FP16 precisions.
+- nv_small
+    - Targets smaller workload.
+    - Very limited feature support.
+    - Has 64 8-bit MACs.
+    - Only supports INT8 precision.
+    - Headless implementation (no microcontroller for task management).
+    - No secondary SRAM support for caches.
+
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_config.png" alt="nvdla config" title="nvdla config" width="500">
+</p> 
+
+We have two options when running NVDLA on this virtual simulator,
+- Build our own virtual platform
+- Use the one available with a docker
+
+We first went with building our own platform. We followed the instructions on this [link](https://nvdla.org/vp.html). These are the challenges we faced,
+- Compilation of the SystemC model
+    - It needs an Ubuntu environment, but latest versions cannot be used (need Ubuntu 14.04).
+    - It need gcc/g++ 4.8.4 which is available on Ubuntu 14.04 (ECE servers currently use gcc 8.x).
+    - We ran Ubuntu 14.04 on a Virtual Machine build the virtual platform.
+- Building Linux Kernel
+    - We need to use exactly 2017.11 version of [buildroot](https://buildroot.org/download.html) inorder to avoid any errors.
+
+It is easier to run the virtual platform on a docker to avoid these complications.
+
+The runtime capabilities in this platform is limited to running the simulation for a single image.
+
+##### Emulation on Amazon EC2 “F1” environment (AWS FPGA)
+
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_aws.png" alt="nvdla aws" title="nvdla aws" width="500">
+</p>
+
+Here as you can see, the QEMU CPU model is simulated on a OpenDLA Virtual Platform. However, instead of a SystemC model, NVDLA is deployed on the FPGA in RTL.
+
+The runtime capabilities are increased on this platform. We can run regressions and collect data to evaluate the performance and energy efficiency of the NVDLA design. Here are some data collected and displayed on the [NVDLA website](https://nvdla.org/primer.html),
+
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_results.png" alt="nvdla results" title="nvdla results" width="500">
 </p>
+
+#### Runtime
+
+During runtime, the NVDLA loadable goes through multiple abstraction layers before reaching the NVDLA hardware. They are as follows,
+- User-Mode Driver (UMD) - Loads the loadable and submits inference job to KMD.
+- Kernel-Mode Driver (KMD) - Configures functional blocks on NVDLA and schedules operations according to the inference jobs received.
+
+There [nvdla/sw](https://github.com/nvdla/sw) repository provides the resources to build these drivers, but we ran into errors when trying to build it. So, we used prebuilt versions of it for this project. 
+
+After starting the virtual simulator platform, the UMD and KMD should be loaded. Then we run the NVDLA loadable on it. They have provided 4 modes for the runtime,
+1. Run with only the NVDLA loadable.
+    - It runs a sanity test with input embedded in it.
+    - Will give the execution time at the end of it.
+2. Run with NVDLA loadable and a sample image.
+    - It runs a network test to generate the output for given image.
+    - Will give the execution time along with the output generated.
+    - The nv_full configuration expects a 4-channel image as the input image.
+3. Run regressions (did not test).
+    - The regressions cannot be run on the virtual platform used (needs an FPGA implementation).
+4. Run in server mode (did not test).
+    - Can run inference jobs on the NVDLA by connecting to it as a client.
+
+The runtime application can also be changed and built again. We tried this, but it gives errors.
+
+Further details on this can be found [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/runtime).
+
+#### Results
 
 ### 2. Scale-Sim:
 
