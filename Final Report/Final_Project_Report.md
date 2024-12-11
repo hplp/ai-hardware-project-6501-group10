@@ -20,7 +20,7 @@ By combining software and hardware analyses, we can assess both the accuracy and
 
 ---
 
-## Objectives
+## 2. Objectives
 The primary goals of this project are:
 1. Software Analysis with PyTorch: Investigate the impact of post-training quantization on model accuracy at different precision levels (INT8, INT16) using PyTorch.
 2. Hardware Analysis with NVDLA Simulator: Analyze execution time for quantized models deployed on the NVDLA simulator to understand their hardware performance.
@@ -30,7 +30,7 @@ The primary goals of this project are:
 
 ---
 
-## Software Side
+## 3. Software Side
 
 ### Training Models
 In this project, we trained three models—LeNet, AlexNet, and EfficientNet—using full-precision FP32 with PyTorch. The Jupyter Notebook files for these models can be found [here]((Final_Report/Training_and_Quantization).
@@ -126,7 +126,7 @@ Quantization is a powerful technique to reduce model size and inference latency.
 
 ### ONNX conversion 
 
-## Hardware Sides
+## 4. Hardware Sides
 ### 1. NVDIA Deep Learning Accelerator (NVDLA):
 
 <p align="center">
@@ -323,7 +323,7 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
 </p>
 
 
-#### SRAM Bandwidth
+##### SRAM Bandwidth
 
 Definition: SRAM bandwidth refers to the rate at which data can be read from or written to the on-chip SRAM buffers (e.g., IFMAP SRAM, Filter SRAM, OFMAP SRAM) in words per cycle.
 
@@ -341,7 +341,7 @@ Comparison of SRAM Bandwidth for models
 </p>
 
 
-#### DRAM Bandwidth
+##### DRAM Bandwidth
 
 Definition: DRAM bandwidth refers to the rate at which data can be read from or written to the off-chip DRAM memory in words per cycle.
 
@@ -366,7 +366,7 @@ Comparison of DRAM Bandwidth for models
 All the results and files for Scale-Sim are included in this folder [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Scale-Sim).
 
 
-## Challenges and Takeaways
+## 5. Challenges and Takeaways
 
 ### Challenges
 - ONNX to Caffe Conversion: Lack of ONNX support in the NVDLA required converting to Caffe, which remains problematic.
@@ -381,14 +381,14 @@ All the results and files for Scale-Sim are included in this folder [here](https
 - Data Preprocessing: Normalization and augmentation improved model robustness, especially for EfficientNet on CIFAR-10.
 
 
-## 8. Future Improvements
+## 6. Future Improvements
 Potential enhancements include:
 
 [Improvement 1 with reason]
 [Improvement 2 with reason]
 
 
-## References
+## 7. References
 Samajdar, A., Zhu, Y., Whatmough, P., Mattina, M., & Krishna, T. (2018). SCALE-Sim: Systolic CNN Accelerator Simulator. arXiv. https://doi.org/10.48550/arXiv.1811.02883
 
 https://nvdla.org
