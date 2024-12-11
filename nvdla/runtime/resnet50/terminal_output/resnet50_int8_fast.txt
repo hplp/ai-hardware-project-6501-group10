@@ -1,0 +1,6 @@
+creating new runtime context...
+Emulator starting
+Unknown image type: submitting tasks...
+execution time = 17405247527.000000 s
+Shutdown signal received, exiting
+Test pass
