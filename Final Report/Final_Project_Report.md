@@ -45,6 +45,14 @@ The details of their accuracy are presented in Table 1.
 | AlexNet         | CIFAR-10   | 83.73%  |                    
 | EfficientNet    | CIFAR-10  | 91.94%  |  
 
+# Model Training Metrics
+
+## Loss vs Epochs
+![Loss vs Epochs](images/output(5).png)
+
+## Accuracy vs Epochs
+![Accuracy vs Epochs](images/output(4).png)
+
 ### Post-Training Quantization 
 
 We implemented post-training quantization, which applies quantization after the model has been trained. Our approach utilizes layer-wise quantization, meaning that each layer is quantized independently. Both the inputs and weights are quantized to reduce memory usage and computational demands. Each tensor has its own scaling factor, allowing for precise mapping of values into the quantized range at the layer level.
