@@ -32,7 +32,7 @@ The primary goals of this project are:
 
 ### 3. Software Side
 
-#### **Training Models**
+#### **3.1 Training Models**
 
 In this project, we trained three models—LeNet, AlexNet, and EfficientNet—using full-precision FP32 in PyTorch.
 
@@ -61,7 +61,7 @@ In this project, we trained three models—LeNet, AlexNet, and EfficientNet—us
 
 ---
 
-#### **Post-Training Quantization**
+#### **3.2 Post-Training Quantization**
 
 We implemented **post-training quantization**, a method where quantization is applied after model training. Specifically, we used layer-wise quantization, in which inputs and weights for each layer are quantized independently. Each tensor was assigned a unique scaling factor to ensure precise mapping into the quantized range.
 
@@ -84,7 +84,7 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 </p>
 ---
 
-#### **Impact of Quantization**
+#### **3.3 Impact of Quantization**
 
 - **LeNet (MNIST)**: Minimal performance degradation in INT8, with INT16 matching FP32. Its simple architecture and dataset make it resilient to quantization.
 - **AlexNet (MNIST)**: Shows a slight accuracy drop in INT16 and INT8. Performs robustly on MNIST even with reduced precision.
@@ -92,7 +92,7 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 
 ---
 
-#### **Quantization Approaches**
+#### **3.4 Quantization Approaches**
 
 1. **Manual Per-Layer Quantization:**
    - Accuracy depends heavily on correct scaling and rounding.
@@ -103,7 +103,7 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 
 ---
 
-#### **Analysis: Dataset and Model Complexity**
+#### **3.5 Analysis: Dataset and Model Complexity**
 
 - **MNIST:** Highly tolerant to quantization due to its simplicity. Even manual approaches perform well.  
 - **CIFAR-10:** Requires sophisticated quantization techniques due to its higher resolution and complexity.  
@@ -113,7 +113,7 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 
 ---
 
-#### **Discussion and Recommendations**
+#### **3.6 Discussion and Recommendations**
 
 - **Quantization Suitability:**  
   - **INT8:** Strikes a good balance between accuracy and computational efficiency.  
@@ -129,13 +129,13 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 
 ---
 
-#### **Conclusion**
+#### **3.6 Conclusion**
 
 Quantization significantly reduces model size and inference latency, but its success depends on the dataset, model architecture, and chosen method. Dynamic quantization outperforms manual approaches, particularly on complex datasets like CIFAR-10. Models such as LeNet and AlexNet demonstrate strong resilience to quantization, making them ideal for deployment on resource-constrained devices.
 
 ---
 
-#### **ONNX Conversion**
+#### **3.7 ONNX Conversion**
 
 We converted our trained models into ONNX format (Open Neural Network Exchange), enabling seamless interoperability between AI frameworks like PyTorch and Keras. ONNX serves as a bridge, allowing models trained in one framework to be deployed on a variety of hardware platforms. For example, below, you can see the ONNX graph of LeNet generated with [ netron ](https://netron.app/).
 
