@@ -9,7 +9,7 @@ Q10
 
 ## 1. Project Overview
 
-#### Project Title: [Performance Evaluation of CNN on Open-Source Platforms]  
+#### Project Title: Performance Evaluation of CNN on Open-Source Platforms  
 #### Repository URL: [GitHub Repository Link](https://github.com/hplp/ai-hardware-project-6501-group10)
 
 #### Description
