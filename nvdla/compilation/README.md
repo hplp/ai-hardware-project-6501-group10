@@ -3,7 +3,6 @@
 The NVDLA compiler is available [here](https://github.com/nvdla/sw/tree/master/prebuilt/x86-ubuntu) and it can be used as follows,
 
 <a name="nvdla-compiler-help"></a>
-## Help
 
     Usage: ./nvdla_compiler [options] --prototxt <prototxt_file> --caffemodel <caffemodel_file>
     where options include:
