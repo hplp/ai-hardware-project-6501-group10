@@ -47,10 +47,16 @@ In this project, we trained three models—LeNet, AlexNet, and EfficientNet—us
 | EfficientNet   | CIFAR-10   | 91.94%            |
 
 **Model Training Metrics**  
-- **Loss vs. Epochs**  
+- **Loss vs. Epochs**
+  <p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(5).png" width="500">
+</p>
 - **Accuracy vs. Epochs**
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(4).png"  width="500">
+</p>
 
-These metrics were recorded for each model and visualized in the associated notebooks.
+
 
 ---
 
