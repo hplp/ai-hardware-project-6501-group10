@@ -191,7 +191,7 @@ Since we deployed only on a virtual simulator platform, we only have results for
 
 These numbers are way off. Obviously, the simulation didn't run for 5 million hours. The LeNet finishes within 10 minutes and ResNet-50 run for upto 5 hours. Instead of looking at the absolute values, we compared the relative values.
 
-The ResNet-50 has some improvement when running on INT8 quantized mode, but the performance has worsened for LeNet. We assumed that this is because LeNet is a very small model and the overhead introduced to the NVDLA by handling a fixed-point quantization outweighs any performance gained by lighter computations. There might also be the possibility that LeNet is even too small to consume all 2048 8-bit MACs available in the ``nv_full`` configuration.
+The ResNet-50 has some improvement when running on INT8 quantized mode, but the performance has worsened for LeNet. We assumed that this is because LeNet is a very small model and the overhead introduced to the NVDLA by handling a fixed-point quantization outweighs any performance gained by lighter computations. There might also be the possibility that LeNet is even too small to consume all 2048 8-bit MACs available in the ``nv_full`` configuration. ``nv_small`` configuration might be a better fit for the LeNet, but we cannot do this comparison on ``nv_small`` because it doesn't support FP16 precision.
 
 The quantization is handled by the NVDLA compiler itself. So, we can't expect a different output unless we make changes to the NVDLA framework.
 
