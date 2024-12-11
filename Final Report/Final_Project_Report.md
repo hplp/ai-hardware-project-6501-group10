@@ -82,7 +82,7 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
 
 #### Results 
 
-## Models Performance Table
+#### Models Performance Table
 
 | **Models**      | **Cycles** | **Overall Utilization (%)** | **Mapping Efficiency (%)** |
 |------------------|-----------|-----------------------------|----------------------------|
