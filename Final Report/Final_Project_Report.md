@@ -370,16 +370,17 @@ All the results and files for Scale-Sim are included in this folder [here](https
 
 ### Challenges
 - ONNX to Caffe Conversion: Lack of ONNX support in the NVDLA required converting to Caffe, which remains problematic.
-- Outdated Simulators: the NVDLA's outdated emulators forced us to use alternatives like Scale-Sim.
+- Outdated Simulators: The NVDLA's outdated emulators forced us to use alternatives like Scale-Sim.
 - Complex Setup: Docker and QEMU setups for GreenSocs QBox required extensive troubleshooting.
 - Quantization Limitations: Scale-Sim lacked support for quantization.
-
+- Quantization Complexity with Scale-Sim: Scale-Sim lacked native support for quantized models.
 ### Key Takeaways
 
-- Layer-wise Quantization: Allowed better control over scaling factors, maintaining accuracy.
+- Layer-wise Quantization: The project allowed better control over scaling factors, maintaining accuracy.
 - Platform Utilization: The NVDLA gave detailed execution times; Scale-Sim helped assess utilization and mapping efficiency.
 - Data Preprocessing: Normalization and augmentation improved model robustness, especially for EfficientNet on CIFAR-10.
-
+- Simulator Insights: Scale-Sim provided critical insights into hardware-level metrics like cycles, utilization, and bandwidth efficiency, making it valuable for DNN deployment evaluations.
+- Integration of Software and Hardware Analyses: The project effectively combined PyTorch-based quantization techniques with hardware performance evaluations using simulators like NVDLA and Scale-Sim.
 
 ## 6. Future Improvements
 Potential enhancements include:
