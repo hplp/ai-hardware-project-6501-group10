@@ -221,6 +221,9 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/mapping.png" alt="mapping" title="mapping" width="300" height= "200">
 </p>
 
+All the results and files for Scale-Sim are included in this folder [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Scale-Sim).
+
+
 ## Challenges and Takeaways
 
 ### Challenges
