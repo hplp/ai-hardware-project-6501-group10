@@ -378,7 +378,7 @@ Comparison of DRAM Bandwidth for models
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/OFMAP DRAM BW.png " alt=" " title=" " width="300" height= "200">
 </p>
 
-
+In conclusion Alexnet has higher Bandwidth utilization for SRAM and DRAM.
 
 
 All the results and files for Scale-Sim are included in this folder [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Scale-Sim).
