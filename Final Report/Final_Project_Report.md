@@ -385,6 +385,7 @@ Comparison of SRAM Bandwidth for models
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/OFMAP SRAM BW.png " alt=" " title=" " width="300" height= "200">
 </p>
 
+LeNet has the lowest SRAM bandwidth usage, making it ideal for low-resource systems. AlexNet has the highest FILTER and IFMAP SRAM demands, reflecting its computational complexity. EfficientNet balances SRAM usage efficiently, with moderate FILTER and IFMAP needs and higher OFMAP SRAM reliance, making it suitable for balanced resource-performance trade-offs.
 
 ##### DRAM Bandwidth
 
@@ -413,7 +414,7 @@ Comparison of DRAM Bandwidth for models
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/OFMAP DRAM BW.png " alt=" " title=" " width="300" height= "200">
 </p>
 
-In conclusion Alexnet has higher Bandwidth utilization for SRAM and DRAM.
+LeNet has the lowest overall DRAM bandwidth usage, suitable for low-resource systems. AlexNet shows the highest OFMAP DRAM bandwidth demand (32.00%), indicating heavy reliance on external memory for output feature maps. EfficientNet balances DRAM usage, with moderate FILTER and IFMAP bandwidth needs but high OFMAP bandwidth (28.53%), making it efficient for performance-focused systems.
 
 
 All the results and files for Scale-Sim are included in this folder [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Scale-Sim).
