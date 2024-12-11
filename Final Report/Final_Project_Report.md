@@ -142,6 +142,8 @@ We converted our trained models into ONNX format (Open Neural Network Exchange),
 
 All aspects of training, quantization, and ONNX conversion are documented in the Jupyter Notebook, accessible [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Final%20Report/Training%20and%20Quantization), and you can duplicate it in google collab or Rivana.
 
+The trained models files can be found [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Final%20Report/Trained%20Models), and the ONNX format files can be found [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Final%20Report/ONNX%20Models%20files).
+
 
 
 ## 4. Hardware Sides
