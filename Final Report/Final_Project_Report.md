@@ -309,7 +309,11 @@ The quantization is handled by the NVDLA compiler itself. So, we can't expect a 
 
 We need to get more reliable results using a hardware implementation on AWS FPGA. However, it still needs a OpenDLA virtual platform to emulate the CPU. We might run into issues because we have limited control over downgrading the software when running on AWS servers.
 
+---
+
 ### 4.2 Scale-Sim:
+
+#### 4.2.1 Scale-Sim Architecture and Workflow
 
 Scale-sim (Systolic CNN Accelerator Simulator) is a lightweight and highly configurable simulator that gives valuable insights into hardware-level performance, enabling efficient testing and deployment of deep neural networks (DNNs) models without access to physical hardware. Below figure illustrates the architecture and workflow of SCALE-Sim. 
 
@@ -340,7 +344,7 @@ Key components of SCALE-Sim architecture include:
 
 In this project, Scale-Sim used to experiment with different DNN models i.e. LeNet, AlexNet and EfficientNet to evaluate the performances in hardware architecture.
 
-#### Results 
+#### 4.2.2 Results 
 
 ##### Models Performance 
 
@@ -356,11 +360,11 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/mapping.png" alt="mapping" title="mapping" width="300" height= "200">
 </p>
 
-#### Conclusion 
+#### 4.2.3 Conclusion 
 
 The performance analysis shows significant differences across the different models (LeNet, AlexNet and EfficientNet). AlexNet has the highest overall utilization (91.45%) and mapping efficiency (96.05%), making it highly effective for hardware deployment. Despite of its advanced architecture,EfficientNet showes moderate mapping efficiency (58.85%) and lower utilization (25.66%), indicating requirement for optimization. LeNet is a simpler model, has low utilization (11.42%) but relatively high mapping efficiency (80.08%), making it suitable for lightweight applications. These results emphasize the need to match model complexity with hardware capabilities for optimal performance.
 
-#### SRAM DRAM Bandwidth Analysis
+#### 4.2.4 SRAM DRAM Bandwidth Analysis
 
 ##### SRAM Bandwidth
 
@@ -421,6 +425,7 @@ LeNet has the lowest overall DRAM bandwidth usage, suitable for low-resource sys
 
 All the results and files for Scale-Sim are included in this folder [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Scale-Sim).
 
+---
 
 ## 5. Key Takeaways and Challenges  
 
@@ -439,11 +444,14 @@ All the results and files for Scale-Sim are included in this folder [here](https
 - Quantization Limitations: Scale-Sim lacked support for quantization.
 - Quantization Complexity with Scale-Sim: Scale-Sim lacked native support for quantized models.
 
+---
 
 ## 6. Conclusion
 This project evaluated CNN performance using software-based quantization and hardware simulations on open-source platforms. It showed that post-training quantization can reduce computation and memory needs while maintaining accuracy for simpler models. Tools like NVDLA and Scale-Sim provided insights into execution time, utilization, and efficiency.
 
 While challenges like outdated tools and complex setups were encountered, the project demonstrated the potential of combining software and hardware analyses for efficient model deployment. These findings provide a foundation for future improvements in quantization techniques and hardware simulation workflows.
+
+---
 
 ## 7. References
 Columbia University. (n.d.). Guide – How to: integrate a third-party accelerator (e.g. NVDLA). Retrieved December 9, 2024, from https://www.esp.cs.columbia.edu/docs/thirdparty_acc/thirdparty_acc-guide/
