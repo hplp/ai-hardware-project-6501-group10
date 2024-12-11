@@ -36,6 +36,8 @@ The details of their accuracy are presented in Table 1.
 | LeNet           | MNIST   | 98.16%  |                    
 | AlexNet         | MNIST   | 99.19%  |                    
 | EfficientNet    | MNIST   | 98.17%  |   
+| AlexNet         | CIFAR-10   | 83.73%  |                    
+| EfficientNet    | CIFAR-10  | 91.94%  |  
 
 ### Post-Training Quantization 
 
