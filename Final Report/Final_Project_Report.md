@@ -56,7 +56,12 @@ Scale-sim (Systolic CNN Accelerator Simulator) is a lightweight and highly confi
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/scale-sim.png" alt="scale-sim" title="scale-sim" width="500" height="300">
 </p>
+Source
+SCALE-Sim: Systolic CNN Accelerator Simulator - A. Samajdar et al  
+[Read the Paper](https://arxiv.org/abs/1811.02883)
 
+
+In this project, Scale-Sim used to experiment with different DNN models i.e. LeNet, AlexNet and EfficientNet to evaluate performance in hardware architecture.
 
 -LeNet??
 -AlexNet??
