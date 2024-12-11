@@ -133,7 +133,12 @@ Quantization significantly reduces model size and inference latency, but its suc
 
 #### **ONNX Conversion**
 
-We converted our trained models into ONNX format (Open Neural Network Exchange), enabling seamless interoperability between AI frameworks like PyTorch and Keras. ONNX serves as a bridge, allowing models trained in one framework to be deployed on a variety of hardware platforms.
+We converted our trained models into ONNX format (Open Neural Network Exchange), enabling seamless interoperability between AI frameworks like PyTorch and Keras. ONNX serves as a bridge, allowing models trained in one framework to be deployed on a variety of hardware platforms. For example below you can see the ONNX graph of LeNet generatered with .
+
+- **LeNet ONNX graph**
+  <p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/lenet.png" width="500">
+</p>
 
 All aspects of training, quantization, and ONNX conversion are documented in the Jupyter Notebook, accessible [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Final%20Report/Training%20and%20Quantization), and you can duplicate it in google collab or Rivana.
 
