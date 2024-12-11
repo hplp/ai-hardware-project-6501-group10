@@ -46,7 +46,8 @@ The details of their accuracy are presented in Table 1.
 
 Scale-sim (Systolic CNN Accelerator Simulator) is a lightweight and highly configurable simulator that gives valuable insights into hardware-level performance, enabling efficient testing and deployment of deep neural networks (DNNs) models without access to physical hardware. Below figure illustrates the architecture and workflow of SCALE-Sim. 
 
-![scale-sim](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_vp.png "nvdla virtual")
+![scale-sim](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/scale-sim.png "scale-sim")
+
 
 -LeNet??
 -AlexNet??
