@@ -51,13 +51,12 @@ We implemented post-training quantization, which applies quantization after the 
 
 However, for EfficientNet, due to its more complex structure, we could not utilize layer-wise quantization. Instead, we employed PyTorch functions to quantize the models. Additionally, we used the same approach for AlexNet on the CIFAR-10 dataset, given its complexity.
 
-# Comprehensive Analysis of Quantization Approaches Across Models and Datasets
 
 This analysis compares the effects of quantization (INT8 and INT16) across various models (LeNet, AlexNet, EfficientNet) and datasets (MNIST, CIFAR-10). It covers performance, resilience to quantization, and implementation approaches.
 
 ---
 
-## Summary of Results
+## Table 2: Summary of Results
 
 | **Model**       | **Dataset** | **FP32 Accuracy** | **INT16 Accuracy** | **INT8 Accuracy** | **Notes**                                                                 |
 |------------------|-------------|--------------------|---------------------|--------------------|---------------------------------------------------------------------------|
