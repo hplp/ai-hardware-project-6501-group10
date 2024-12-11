@@ -322,7 +322,31 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/mapping.png" alt="mapping" title="mapping" width="300" height= "200">
 </p>
 
-DRAM bandwidth for models 
+
+SRAM Bandwidth
+•	Definition: SRAM bandwidth refers to the rate at which data can be read from or written to the on-chip SRAM buffers (e.g., IFMAP SRAM, Filter SRAM, OFMAP SRAM) in words per cycle.
+•	In SCALE-Sim, SRAM bandwidth depends on the systolic array configuration and the dataflow being simulated (e.g., weight-stationary, output-stationary).
+
+Formula:
+SRAM Bandwidth (words/cycle)=Words Transferred per Cycle (read/write).\text{SRAM Bandwidth (words/cycle)} = \text{Words Transferred per Cycle (read/write)}.SRAM Bandwidth (words/cycle)=Words Transferred per Cycle (read/write).
+
+Comparison of SRAM Bandwidth for models
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/Filter SRAM BW.png" alt=" " title="cyles" width="300" height= "200">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/IFMAP SRAM BW.png" alt=" " title=" " width="300" height= "200">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/OFMAP SRAM BW.png " alt=" " title=" " width="300" height= "200">
+</p>
+
+
+DRAM Bandwidth
+•	Definition: DRAM bandwidth refers to the rate at which data can be read from or written to the off-chip DRAM memory in words per cycle.
+•	It is influenced by the size of the off-chip data transfer, the DRAM bus width, and the DRAM-to-SRAM communication latency.
+
+Formula: 
+
+DRAM Bandwidth (words/cycle)=Word Size (bits)Bus Width (bits)×Array Clock SpeedDRAM Clock Speed.
+
+Comparison of DRAM Bandwidth for models 
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/Filter DRAM BW.png" alt=" " title=" " width="300" height= "200">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/IFMAP DRAM BW.png" alt=" " title=" " width="300" height= "200">
@@ -330,12 +354,6 @@ DRAM bandwidth for models
 </p>
 
 
-SRAM bandwidth for models 
-<p align="center">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/Filter SRAM BW.png" alt=" " title="cyles" width="300" height= "200">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/IFMAP SRAM BW.png" alt=" " title=" " width="300" height= "200">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/OFMAP SRAM BW.png " alt=" " title=" " width="300" height= "200">
-</p>
 
 
 
