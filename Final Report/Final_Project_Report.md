@@ -131,6 +131,7 @@ ONNX acts as a bridge in the middle, letting us take a model trained in one fram
 All of the parts of the training, quantization, and ONNX conversion can be found in the related Jupyter notebook [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Training%20quantization)
 
 
+
 ## 4. Hardware Sides
 ### 1. NVDIA Deep Learning Accelerator (NVDLA):
 
