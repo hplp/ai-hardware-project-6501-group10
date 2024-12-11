@@ -31,4 +31,4 @@ We used the following command when creating the NVDLA loadables,
 
 The rest of the arguements were not explicitely defined, hence default values were used.
 
-The caffe models used and the loadables generated a included in this directory.
+The caffe models used and the loadables generated are included in this directory.
