@@ -337,6 +337,8 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
 
 #### 4.2.2 Results 
 
+Results were generated using this code notebook [Here](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Scale-Sim/Scale-Sim.ipynb).
+
 ##### Models Performance 
 
 | **Models**      | **Cycles** | **Overall Utilization (%)** | **Mapping Efficiency (%)** |
