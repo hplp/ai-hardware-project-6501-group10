@@ -385,9 +385,9 @@ All the results and files for Scale-Sim are included in this folder [here](https
 
 
 ## 6. Conclusion
-The project successfully explored the performance of Convolutional Neural Networks (CNNs) on open-source platforms by integrating software-based quantization techniques with hardware simulation tools. Post-training quantization demonstrated the potential to reduce computational complexity and memory usage while maintaining high accuracy for simpler models like LeNet. Hardware simulations using NVDLA and Scale-Sim provided valuable insights into execution time, utilization, and efficiency metrics.
+This project evaluated CNN performance using software-based quantization and hardware simulations on open-source platforms. It showed that post-training quantization can reduce computation and memory needs while maintaining accuracy for simpler models. Tools like NVDLA and Scale-Sim provided insights into execution time, utilization, and efficiency.
 
-Despite challenges such as outdated tools, complex setups, and limited support for quantized models, the project highlighted the importance of dynamic quantization and platform optimization for real-world deployment. The findings underscore the need for modernized tools and enhanced workflows to better evaluate and deploy quantized DNNs on hardware. This project sets the groundwork for further exploration into quantization-aware training and hybrid precision techniques for improving accuracy and hardware efficiency.
+While challenges like outdated tools and complex setups were encountered, the project demonstrated the potential of combining software and hardware analyses for efficient model deployment. These findings provide a foundation for future improvements in quantization techniques and hardware simulation workflows.
 
 ## 7. References
 Columbia University. (n.d.). Guide – How to: integrate a third-party accelerator (e.g. NVDLA). Retrieved December 9, 2024, from https://www.esp.cs.columbia.edu/docs/thirdparty_acc/thirdparty_acc-guide/
