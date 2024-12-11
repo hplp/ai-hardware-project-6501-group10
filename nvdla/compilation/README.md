@@ -1,6 +1,6 @@
 # **NVDLA Compiler**
 
-The NVDLA compiler is available at [link](https://github.com/nvdla/sw/tree/master/prebuilt/x86-ubuntu) and it can be used as follows,
+The NVDLA compiler is available [here](https://github.com/nvdla/sw/tree/master/prebuilt/x86-ubuntu) and it can be used as follows,
 
 <a name="nvdla-compiler-help"></a>
 ## Help
