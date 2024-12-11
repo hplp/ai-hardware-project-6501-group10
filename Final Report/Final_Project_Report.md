@@ -49,12 +49,12 @@ The details of their accuracy are presented in Table 1.
 
 #### Loss vs Epochs
 <p align="center">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(5).png">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(5).png" width="500" height="300">
 </p>
 
 #### Accuracy vs Epochs
 <p align="center">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(4).png">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(4).png" width="500" height="300">
 </p>
 
 
