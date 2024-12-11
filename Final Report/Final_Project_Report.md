@@ -82,11 +82,11 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 
 #### **Impact of Quantization**
 
-- ** LeNet (MNIST)**: Minimal performance degradation in INT8, with INT16 matching FP32. Its simple architecture and dataset make it resilient to quantization.
-- ** AlexNet (MNIST) **: Shows a slight accuracy drop in INT16 and INT8. Performs robustly on MNIST even with reduced precision.
-- ** AlexNet (CIFAR-10) **: Dynamic quantization retains accuracy, but manual quantization causes a significant drop due to the dataset's complexity.
-- ** EfficientNet (MNIST) **: INT16 and INT8 quantization result in a sharp drop, likely due to the advanced and complex architecture.
-- ** EfficientNet (CIFAR-10) **: Faces substantial degradation in INT16 and INT8, indicating that the quantization method needs further optimization for complex models and datasets.
+- **LeNet (MNIST)**: Minimal performance degradation in INT8, with INT16 matching FP32. Its simple architecture and dataset make it resilient to quantization.
+- **AlexNet (MNIST)**: Shows a slight accuracy drop in INT16 and INT8. Performs robustly on MNIST even with reduced precision.
+- **AlexNet (CIFAR-10)**: Dynamic quantization retains accuracy, but manual quantization causes a significant drop due to the dataset's complexity.
+- **EfficientNet (MNIST)**: INT16 and INT8 quantization result in a sharp drop, likely due to the advanced and complex architecture.
+- **EfficientNet (CIFAR-10)**: Faces substantial degradation in INT16 and INT8, indicating that the quantization method needs further optimization for complex models and datasets.
 
 ---
 
