@@ -58,9 +58,6 @@ In this project, we trained three models—LeNet, AlexNet, and EfficientNet—us
 </p>
 
 
-
----
-
 #### **3.2 Post-Training Quantization**
 
 We implemented **post-training quantization**, a method where quantization is applied after model training. Specifically, we used layer-wise quantization, in which inputs and weights for each layer are quantized independently. Each tensor was assigned a unique scaling factor to ensure precise mapping into the quantized range.
@@ -84,7 +81,6 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 </p>
 
 
----
 
 #### **3.3 Impact of Quantization**
 
@@ -92,7 +88,6 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 - **AlexNet (MNIST)**: Shows a slight accuracy drop in INT16 and INT8. Performs robustly on MNIST even with reduced precision.
 - **AlexNet (CIFAR-10), EfficientNet (MNIST, CIFAR-10)**: Dynamic quantization retains accuracy, but manual quantization causes a significant drop due to the dataset's complexity.
 
----
 
 #### **3.4 Quantization Approaches**
 
@@ -103,7 +98,6 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
    - Automates layer-wise scaling, rounding, and optimization.
    - Superior performance on complex datasets.
 
----
 
 #### **3.5 Analysis: Dataset and Model Complexity**
 
@@ -113,7 +107,6 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 - **AlexNet:** Performs well on MNIST but struggles on CIFAR-10 without optimized quantization.  
 - **EfficientNet:** Advanced architecture suggests robustness, but detailed analysis is limited.
 
----
 
 #### **3.6 Discussion and Recommendations**
 
@@ -129,13 +122,11 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
   - Investigate **quantization-aware training (QAT)** to further minimize accuracy loss.  
   - Explore **hybrid quantization**, retaining higher precision (e.g., FP16) for sensitive layers.
 
----
 
 #### **3.6 Conclusion**
 
 Quantization significantly reduces model size and inference latency, but its success depends on the dataset, model architecture, and chosen method. Dynamic quantization outperforms manual approaches, particularly on complex datasets like CIFAR-10. Models such as LeNet and AlexNet demonstrate strong resilience to quantization, making them ideal for deployment on resource-constrained devices.
 
----
 
 #### **3.7 ONNX Conversion**
 
