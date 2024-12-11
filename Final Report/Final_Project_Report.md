@@ -262,4 +262,5 @@ Potential enhancements include:
 [Improvement 2 with reason]
 
 
-
+## References
+Samajdar, A., Zhu, Y., Whatmough, P., Mattina, M., & Krishna, T. (2018). SCALE-Sim: Systolic CNN Accelerator Simulator. arXiv. https://doi.org/10.48550/arXiv.1811.02883
