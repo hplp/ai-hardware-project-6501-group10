@@ -73,9 +73,9 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 |-----------------|------------|--------------------|---------------------|--------------------|----------------------------------------------|
 | LeNet          | MNIST      | 98.16%            | 98.16%             | 98.06%            | Minimal degradation in INT8.                 |
 | AlexNet        | MNIST      | 99.19%            | 98.64%             | 98.60%            | Robust performance on MNIST.                 |
-| AlexNet        | CIFAR-10   | 83.73%            | 83.73% / 50.00%    | 83.74% / 49.83%   | Dynamic quantization retains accuracy; manual suffers. |
-| EfficientNet   | MNIST      | Not provided      | Not provided       | Not provided      |                                              |
-| EfficientNet   | CIFAR-10   | 92.53%     | Not provided       | Not provided      |                                              |
+| AlexNet        | CIFAR-10   | 83.73%            | 83.73% / 50.00%    | 83.7% / 49.83%   | Dynamic quantization retains accuracy; manual suffers. |
+| EfficientNet   | MNIST      | 96.73%      | 96.78% /  | /      |                                              |
+| EfficientNet   | CIFAR-10   | 92.53%     | 92.53% / 32.82%  | 92.52% / 10%     |                                              |
 
 ---
 
