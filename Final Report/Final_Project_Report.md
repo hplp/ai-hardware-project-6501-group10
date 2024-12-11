@@ -389,10 +389,10 @@ Potential enhancements include:
 
 
 ## 7. References
+Columbia University. (n.d.). Third-party accelerator integration guide. Retrieved December 9, 2024, from https://www.esp.cs.columbia.edu/docs/thirdparty_acc/thirdparty_acc-guide/
+
+NVIDIA. (n.d.). NVDLA: NVIDIA Deep Learning Accelerator. Retrieved December 9, 2024, from https://nvdla.org
+
+SadhaShan. (n.d.). NVDLA GitHub Repository. GitHub. Retrieved December 9, 2024, from https://github.com/SadhaShan/NVDLA
+
 Samajdar, A., Zhu, Y., Whatmough, P., Mattina, M., & Krishna, T. (2018). SCALE-Sim: Systolic CNN Accelerator Simulator. arXiv. https://doi.org/10.48550/arXiv.1811.02883
-
-https://nvdla.org
-
-https://github.com/SadhaShan/NVDLA
-
-https://www.esp.cs.columbia.edu/docs/thirdparty_acc/thirdparty_acc-guide/
