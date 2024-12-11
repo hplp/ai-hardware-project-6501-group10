@@ -4,7 +4,7 @@
 ## Team Members
 - Melika Morsali Toshmnaloui
 - Kavish Nimnake Ranawella
--
+- Hasantha Ekanayake
 
 ## Description
 This project has two main objectives: one focused on software and the other on hardware.
