@@ -60,8 +60,26 @@ Source
 SCALE-Sim: Systolic CNN Accelerator Simulator - A. Samajdar et al  
 [Read the Paper](https://arxiv.org/abs/1811.02883)
 
+Key components of SCALE-Sim architecture include:
 
-In this project, Scale-Sim used to experiment with different DNN models i.e. LeNet, AlexNet and EfficientNet to evaluate performance in hardware architecture.
+•  Input Files:
+-	Config File: Contains hardware-specific parameters such as array height/width, SRAM sizes, and dataflow (e.g., weight-stationary, output-stationary).
+-	DNN Topology File: Specifies the layers of the DNN (e.g., Conv1, Conv2, FC1) that will be simulated.
+  
+•  Hardware Model:
+-	Systolic Array: A grid of processing elements (PEs) designed for matrix multiplications, crucial for DNN computations.
+-	SRAM Buffers: Includes:
+-	Filter SRAM: Stores weights.
+-	IFMAP SRAM: Stores input feature maps.
+-	OFMAP SRAM: Stores output feature maps.
+	These buffers use double buffering for efficient data transfer.
+
+• Simulation Outputs:
+-	Cycle-Accurate Traces: Tracks memory access (SRAM/DRAM reads and writes).
+-	Performance Metrics: Reports cycles, bandwidth utilization, and hardware efficiency.
+
+
+In this project, Scale-Sim used to experiment with different DNN models i.e. LeNet, AlexNet and EfficientNet to evaluate the performances in hardware architecture.
 
 -LeNet??
 -AlexNet??
