@@ -30,105 +30,105 @@ The primary goals of this project are:
 
 ---
 
-## 3. Software Side
+### 3. Software Side
 
-### Training Models
-In this project, we trained three models—LeNet, AlexNet, and EfficientNet—using full-precision FP32 with PyTorch. The Jupyter Notebook files for these models can be found [here]((Final_Report/Training_and_Quantization).
-The details of their accuracy are presented in Table 1.
-#### Table 1: Models Accuracy Table
+#### **Training Models**
 
-| **Models**      | **Dataset** | **FP32** | 
-|------------------|-----------|-----------------------------|
-| LeNet           | MNIST   | 98.16%  |                    
-| AlexNet         | MNIST   | 99.19%  |                    
-| EfficientNet    | MNIST   | 98.17%  |   
-| AlexNet         | CIFAR-10   | 83.73%  |                    
-| EfficientNet    | CIFAR-10  | 91.94%  |  
+In this project, we trained three models—LeNet, AlexNet, and EfficientNet—using full-precision FP32 in PyTorch.
 
-### Model Training Metrics
+**Table 1: Models Accuracy Summary**
 
-#### Loss vs Epochs
-<p align="center">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(5).png" width="500" height="300">
-</p>
+| **Model**      | **Dataset** | **FP32 Accuracy** |
+|-----------------|------------|--------------------|
+| LeNet          | MNIST      | 98.16%            |
+| AlexNet        | MNIST      | 99.19%            |
+| EfficientNet   | MNIST      | 98.17%            |
+| AlexNet        | CIFAR-10   | 83.73%            |
+| EfficientNet   | CIFAR-10   | 91.94%            |
 
-#### Accuracy vs Epochs
-<p align="center">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output(4).png" width="500" height="300">
-</p>
+**Model Training Metrics**  
+- **Loss vs. Epochs**  
+- **Accuracy vs. Epochs**
 
-
-### Post-Training Quantization 
-
-We implemented post-training quantization, which applies quantization after the model has been trained. Our approach utilizes layer-wise quantization, meaning that each layer is quantized independently. Both the inputs and weights are quantized to reduce memory usage and computational demands. Each tensor has its own scaling factor, allowing for precise mapping of values into the quantized range at the layer level.
-
-However, for EfficientNet, due to its more complex structure, we could not utilize layer-wise quantization. Instead, we employed PyTorch functions to quantize the models. Additionally, we used the same approach for AlexNet on the CIFAR-10 dataset, given its complexity.
-
-
-This analysis compares the effects of quantization (INT8 and INT16) across various models (LeNet, AlexNet, EfficientNet) and datasets (MNIST, CIFAR-10). It covers performance, resilience to quantization, and implementation approaches.
+These metrics were recorded for each model and visualized in the associated notebooks.
 
 ---
 
-#### Table 2: Summary of Results
+#### **Post-Training Quantization**
 
-| **Model**       | **Dataset** | **FP32 Accuracy** | **INT16 Accuracy** | **INT8 Accuracy** | **Notes**                                                                 |
-|------------------|-------------|--------------------|---------------------|--------------------|---------------------------------------------------------------------------|
-| **LeNet**        | MNIST       | 98.16%            | 98.16%             | 98.06%            | Minor degradation with INT8; INT16 identical to FP32.                   |
-| **AlexNet**      | MNIST       | 99.19%            | 98.64%             | 98.60%            | Slight drop with INT16/INT8. Robust to quantization on MNIST.           |
-| **AlexNet**      | CIFAR-10    | 83.73%            | 83.73%/50.00%      | 83.74%/49.83%     | Dynamic quantization retains accuracy; manual approach suffers.         |
-| **EfficientNet** | MNIST       | Not provided      | Not provided       | Not provided      |  |
-| **EfficientNet** | CIFAR-10    | Not provided      | Not provided       | Not provided      |               |
+We implemented **post-training quantization**, a method where quantization is applied after model training. Specifically, we used layer-wise quantization, in which inputs and weights for each layer are quantized independently. Each tensor was assigned a unique scaling factor to ensure precise mapping into the quantized range.
 
----
+However, due to EfficientNet's complexity, we utilized PyTorch's built-in quantization functions instead of manual layer-wise quantization. A similar approach was also applied to AlexNet on CIFAR-10 for consistency.
 
+**Table 2: Quantization Results Summary**
 
-#### Impact of Quantization
-- **LeNet (MNIST)**: Minimal performance degradation, even with INT8. The simplicity of the model and dataset makes it resilient to quantization.
-- **AlexNet (MNIST)**: Slight accuracy drop in INT8 and INT16. The model handles MNIST well, even with reduced precision.
-- **AlexNet (CIFAR-10)**: Dynamic quantization retains accuracy, but manual per-layer quantization suffers from a significant drop. CIFAR-10's complexity magnifies the challenges of poorly optimized quantization.
-
-#### Quantization Approaches
-- **Manual Per-Layer Quantization**:
-  - Accuracy depends heavily on correct scaling and rounding. Errors propagate across layers, leading to accuracy drops, especially on complex datasets like CIFAR-10.
-- **Dynamic Quantization (PyTorch)**:
-  - Handles layer-wise quantization automatically, including scaling, rounding, and optimization. Performs significantly better, especially on complex datasets.
-
-#### Dataset Complexity
-- **MNIST**: As a simple dataset, it is highly tolerant to quantization. Even manual approaches work well.
-- **CIFAR-10**: Requires more sophisticated quantization techniques like dynamic quantization due to its complexity and higher resolution.
-
-#### Model Architecture
-- **LeNet**: Simple architecture ensures resilience to aggressive quantization (e.g., INT8).
-- **AlexNet**: Shows resilience on MNIST but needs optimized quantization for CIFAR-10.
-- **EfficientNet**: Likely robust due to its advanced architecture, but details were unavailable in this analysis.
+| **Model**      | **Dataset** | **FP32 Accuracy** | **INT16 Accuracy** | **INT8 Accuracy** | **Notes**                                     |
+|-----------------|------------|--------------------|---------------------|--------------------|----------------------------------------------|
+| LeNet          | MNIST      | 98.16%            | 98.16%             | 98.06%            | Minimal degradation in INT8.                 |
+| AlexNet        | MNIST      | 99.19%            | 98.64%             | 98.60%            | Robust performance on MNIST.                 |
+| AlexNet        | CIFAR-10   | 83.73%            | 83.73% / 50.00%    | 83.74% / 49.83%   | Dynamic quantization retains accuracy; manual suffers. |
+| EfficientNet   | MNIST      | Not provided      | Not provided       | Not provided      |                                              |
+| EfficientNet   | CIFAR-10   | Not provided      | Not provided       | Not provided      |                                              |
 
 ---
 
-### Discussion
+#### **Impact of Quantization**
 
-#### Quantization Suitability
-- INT8 provides a good trade-off between accuracy and computational efficiency. INT16 closely matches FP32 but offers less computational advantage.
-- Manual quantization should only be used for exploratory or learning purposes. Optimized frameworks like PyTorch's quantization are highly recommended for practical applications.
-
-#### Recommendations
-- Use dynamic quantization for complex models and datasets.
-- For simpler tasks, manual quantization may suffice but requires careful implementation to avoid severe accuracy drops.
-
-#### Future Directions
-- Explore quantization-aware training (QAT) for even better accuracy retention.
-- Investigate hybrid quantization approaches, where sensitive layers (e.g., first and last layers) retain higher precision (e.g., FP16) while others use INT8.
+- **LeNet (MNIST):** Minimal accuracy degradation, even with INT8. The simplicity of LeNet and MNIST ensures resilience to quantization.  
+- **AlexNet (MNIST):** Slight drop in accuracy with INT16 and INT8. Performs well even with reduced precision.  
+- **AlexNet (CIFAR-10):** Dynamic quantization preserves accuracy, while manual quantization leads to significant accuracy drops due to the dataset's complexity.  
+- **EfficientNet:** Requires optimized quantization techniques. Quantization results are not provided due to computational limitations.
 
 ---
 
-### Conclusion
+#### **Quantization Approaches**
 
-Quantization is a powerful technique to reduce model size and inference latency. However, its success depends on the dataset, model architecture, and quantization method. Dynamic quantization outperforms manual approaches, especially on complex datasets like CIFAR-10. Models like LeNet and AlexNet demonstrate strong resilience to quantization, making them suitable for edge and resource-constrained environments.
+1. **Manual Per-Layer Quantization:**
+   - Accuracy depends heavily on correct scaling and rounding.
+   - Propagation of errors across layers can severely affect accuracy, especially with complex datasets like CIFAR-10.
+2. **Dynamic Quantization (PyTorch):**
+   - Automates layer-wise scaling, rounding, and optimization.
+   - Superior performance on complex datasets.
 
-### ONNX conversion 
- we can convert our trained model into ONNX format, which stands for Open Neural Network Exchange. ONNX is an open format that makes it easy to move models between different AI frameworks, like PyTorch, Keras, and others, which you see on the left.
-ONNX acts as a bridge in the middle, letting us take a model trained in one framework and deploy it on various devices.
+---
 
-All of the parts of the training, quantization, and ONNX conversion can be found in the related Jupyter notebook [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/Final%20Report/Training%20quantization)
+#### **Analysis: Dataset and Model Complexity**
+
+- **MNIST:** Highly tolerant to quantization due to its simplicity. Even manual approaches perform well.  
+- **CIFAR-10:** Requires sophisticated quantization techniques due to its higher resolution and complexity.  
+- **LeNet:** Simple architecture makes it resilient to aggressive quantization.  
+- **AlexNet:** Performs well on MNIST but struggles on CIFAR-10 without optimized quantization.  
+- **EfficientNet:** Advanced architecture suggests robustness, but detailed analysis is limited.
+
+---
+
+#### **Discussion and Recommendations**
+
+- **Quantization Suitability:**  
+  - **INT8:** Strikes a good balance between accuracy and computational efficiency.  
+  - **INT16:** Matches FP32 accuracy but offers less computational advantage.  
+
+- **Best Practices:**  
+  - Use **dynamic quantization** for complex models and datasets.  
+  - Employ manual quantization only for exploratory purposes with simpler tasks.  
+
+- **Future Directions:**  
+  - Investigate **quantization-aware training (QAT)** to further minimize accuracy loss.  
+  - Explore **hybrid quantization**, retaining higher precision (e.g., FP16) for sensitive layers.
+
+---
+
+#### **Conclusion**
+
+Quantization significantly reduces model size and inference latency, but its success depends on the dataset, model architecture, and chosen method. Dynamic quantization outperforms manual approaches, particularly on complex datasets like CIFAR-10. Models such as LeNet and AlexNet demonstrate strong resilience to quantization, making them ideal for deployment on resource-constrained devices.
+
+---
+
+#### **ONNX Conversion**
+
+We converted our trained models into ONNX format (Open Neural Network Exchange), enabling seamless interoperability between AI frameworks like PyTorch and Keras. ONNX serves as a bridge, allowing models trained in one framework to be deployed on a variety of hardware platforms.
+
+All aspects of training, quantization, and ONNX conversion are documented in the Jupyter Notebook, accessible [here](Final_Report/Training_and_Quantization).
 
 
 
