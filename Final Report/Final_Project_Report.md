@@ -351,7 +351,7 @@ It is influenced by the size of the off-chip data transfer, the DRAM bus width, 
 Formula:
 
  > **DRAM Bandwidth (words/cycle)** =
-  (<i>Bus Width (bits)</i> / <i>Word Size (bits)</i>) × (<i>DRAM Clock Speed</i> / <i>Array Clock Speed</i>)
+  (Bus Width (bits)/ Word Size (bits)) × (DRAM Clock Speed /Array Clock Speed)
 
 Comparison of DRAM Bandwidth for models 
 <p align="center">
