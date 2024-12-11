@@ -191,6 +191,9 @@ We have two options when running NVDLA on this virtual simulator,
 - Use the one available with a docker
 
 We first went with building our own platform. We followed the instructions on this [link](https://nvdla.org/vp.html). These are the challenges we faced,
+- Updating submodules of ``qbox`` inside the [nvdla/vp](https://github.com/nvdla/vp)
+    - The link used by the submodules needs to be changed to ``https://`` links.
+    - There were times that the ``pixman`` submodule refused connection.
 - Compilation of the SystemC model
     - It needs an Ubuntu environment, but latest versions cannot be used (need Ubuntu 14.04).
     - It need gcc/g++ 4.8.4 which is available on Ubuntu 14.04 (ECE servers currently use gcc 8.x).
