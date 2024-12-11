@@ -90,6 +90,12 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
 | AlexNet         | 738,385   | 91.45                      | 96.05                     |
 | EfficientNet    | 735,114   | 25.66                      | 58.85     
 
+<p align="center">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/cycles.png" alt="nvdla overview" title="nvdla overview" width="300">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/utilization.png" alt="nvdla virtual" title="nvdla virtual" width="300">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/mapping.png" alt="nvdla results" title="nvdla results" width="300">
+</p>
+
 ## Challenges and Takeaways
 
 ### Challenges
