@@ -366,7 +366,15 @@ Comparison of DRAM Bandwidth for models
 All the results and files for Scale-Sim are included in this folder [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Scale-Sim).
 
 
-## 5. Challenges and Takeaways
+## 5. Key Takeaways and Challenges  
+
+
+### Key Takeaways
+- Layer-wise Quantization: The project allowed better control over scaling factors, maintaining accuracy.
+- Platform Utilization: The NVDLA gave detailed execution times; Scale-Sim helped assess utilization and mapping efficiency.
+- Data Preprocessing: Normalization and augmentation improved model robustness, especially for EfficientNet on CIFAR-10.
+- Simulator Insights: Scale-Sim provided critical insights into hardware-level metrics like cycles, utilization, and bandwidth efficiency, making it valuable for DNN deployment evaluations.
+- Integration of Software and Hardware Analyses: The project effectively combined PyTorch-based quantization techniques with hardware performance evaluations using simulators like NVDLA and Scale-Sim.
 
 ### Challenges
 - ONNX to Caffe Conversion: Lack of ONNX support in the NVDLA required converting to Caffe, which remains problematic.
@@ -374,22 +382,9 @@ All the results and files for Scale-Sim are included in this folder [here](https
 - Complex Setup: Docker and QEMU setups for GreenSocs QBox required extensive troubleshooting.
 - Quantization Limitations: Scale-Sim lacked support for quantization.
 - Quantization Complexity with Scale-Sim: Scale-Sim lacked native support for quantized models.
-### Key Takeaways
-
-- Layer-wise Quantization: The project allowed better control over scaling factors, maintaining accuracy.
-- Platform Utilization: The NVDLA gave detailed execution times; Scale-Sim helped assess utilization and mapping efficiency.
-- Data Preprocessing: Normalization and augmentation improved model robustness, especially for EfficientNet on CIFAR-10.
-- Simulator Insights: Scale-Sim provided critical insights into hardware-level metrics like cycles, utilization, and bandwidth efficiency, making it valuable for DNN deployment evaluations.
-- Integration of Software and Hardware Analyses: The project effectively combined PyTorch-based quantization techniques with hardware performance evaluations using simulators like NVDLA and Scale-Sim.
-
-## 6. Future Improvements
-Potential enhancements include:
-
-[Improvement 1 with reason]
-[Improvement 2 with reason]
 
 
-## 7. References
+## 6. References
 Columbia University. (n.d.). Guide – How to: integrate a third-party accelerator (e.g. NVDLA). Retrieved December 9, 2024, from https://www.esp.cs.columbia.edu/docs/thirdparty_acc/thirdparty_acc-guide/
 
 NVIDIA. (n.d.). NVDLA: NVIDIA Deep Learning Accelerator. Retrieved December 9, 2024, from https://nvdla.org
