@@ -335,7 +335,11 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/mapping.png" alt="mapping" title="mapping" width="300" height= "200">
 </p>
 
+#### Conclusion 
+
 The performance analysis highlights significant differences across the evaluated models. AlexNet demonstrated the highest overall utilization (91.45%) and mapping efficiency (96.05%), making it highly effective for hardware deployment. EfficientNet, despite its advanced architecture, showed moderate mapping efficiency (58.85%) and lower utilization (25.66%), indicating room for optimization. LeNet, being a simpler model, had low utilization (11.42%) but relatively high mapping efficiency (80.08%), making it suitable for lightweight applications. These results emphasize the need to match model complexity with hardware capabilities for optimal performance.
+
+#### SRAM DRAM Bandwidth Analysis
 
 ##### SRAM Bandwidth
 
