@@ -309,17 +309,21 @@ In this project, Scale-Sim used to experiment with different DNN models i.e. LeN
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/mapping.png" alt="mapping" title="mapping" width="300" height= "200">
 </p>
 
+DRAM bandwidth for models 
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/Filter DRAM BW.png" alt=" " title=" " width="300" height= "200">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/ IFMAP DRAM BW.png" alt=" " title=" " width="300" height= "200">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/ OFMAP DRAM BW " alt=" " title="mapping" width="300" height= "200">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/IFMAP DRAM BW.png" alt=" " title=" " width="300" height= "200">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/OFMAP DRAM BW.png " alt=" " title=" " width="300" height= "200">
 </p>
 
+
+SRAM bandwidth for models 
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/Filter SRAM BW.png" alt=" " title="cyles" width="300" height= "200">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/ IFMAP SRAM BW.png" alt=" " title=" " width="300" height= "200">
-  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/ OFMAP SRAM BW " alt=" " title=" " width="300" height= "200">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/IFMAP SRAM BW.png" alt=" " title=" " width="300" height= "200">
+  <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/OFMAP SRAM BW.png " alt=" " title=" " width="300" height= "200">
 </p>
+
 
 
 
