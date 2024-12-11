@@ -394,3 +394,5 @@ Samajdar, A., Zhu, Y., Whatmough, P., Mattina, M., & Krishna, T. (2018). SCALE-S
 https://nvdla.org
 
 https://github.com/SadhaShan/NVDLA
+
+https://www.esp.cs.columbia.edu/docs/thirdparty_acc/thirdparty_acc-guide/
