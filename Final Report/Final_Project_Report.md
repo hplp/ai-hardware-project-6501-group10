@@ -63,6 +63,19 @@ Scale-sim (Systolic CNN Accelerator Simulator) is a lightweight and highly confi
 -EfficientNet??
 ## Challenges and Takeaways
 
+# Challenges
+- ONNX to Caffe Conversion: Lack of ONNX support in the NVDLA required converting to Caffe, which remains problematic.
+- Outdated Simulators: the NVDLA's outdated emulators forced us to use alternatives like Scale-Sim.
+- Complex Setup: Docker and QEMU setups for GreenSocs QBox required extensive troubleshooting.
+- Quantization Limitations: Scale-Sim lacked support for quantization.
+
+#Key Takeaways
+
+- Layer-wise Quantization: Allowed better control over scaling factors, maintaining accuracy.
+- Platform Utilization: The NVDLA gave detailed execution times; Scale-Sim helped assess utilization and mapping efficiency.
+- Data Preprocessing: Normalization and augmentation improved model robustness, especially for EfficientNet on CIFAR-10.
+
+
 ## 8. Future Improvements
 Potential enhancements include:
 
