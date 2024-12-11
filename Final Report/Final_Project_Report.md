@@ -128,7 +128,7 @@ Quantization is a powerful technique to reduce model size and inference latency.
  we can convert our trained model into ONNX format, which stands for Open Neural Network Exchange. ONNX is an open format that makes it easy to move models between different AI frameworks, like PyTorch, Keras, and others, which you see on the left.
 ONNX acts as a bridge in the middle, letting us take a model trained in one framework and deploy it on various devices.
 
-All of the parts of the training, quantization, and ONNX conversion can be found in the related Jupyter notebook [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Training%20quantization)
+All of the parts of the training, quantization, and ONNX conversion can be found in the related Jupyter notebook [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/Final%20Report/Training%20quantization)
 
 
 
