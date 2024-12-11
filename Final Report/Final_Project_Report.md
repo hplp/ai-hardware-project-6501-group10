@@ -76,8 +76,8 @@ This analysis compares the effects of quantization (INT8 and INT16) across vario
 | **LeNet**        | MNIST       | 98.16%            | 98.16%             | 98.06%            | Minor degradation with INT8; INT16 identical to FP32.                   |
 | **AlexNet**      | MNIST       | 99.19%            | 98.64%             | 98.60%            | Slight drop with INT16/INT8. Robust to quantization on MNIST.           |
 | **AlexNet**      | CIFAR-10    | 83.73%            | 83.73%/50.00%      | 83.74%/49.83%     | Dynamic quantization retains accuracy; manual approach suffers.         |
-| **EfficientNet** | MNIST       | Not provided      | Not provided       | Not provided      | Likely resilient due to robust architecture, but data unavailable here. |
-| **EfficientNet** | CIFAR-10    | Not provided      | Not provided       | Not provided      | Assumed to follow trends similar to AlexNet on CIFAR-10.                |
+| **EfficientNet** | MNIST       | Not provided      | Not provided       | Not provided      |  |
+| **EfficientNet** | CIFAR-10    | Not provided      | Not provided       | Not provided      |               |
 
 ---
 
