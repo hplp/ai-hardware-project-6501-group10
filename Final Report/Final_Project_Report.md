@@ -82,6 +82,8 @@ However, due to EfficientNet's complexity, we utilized PyTorch's built-in quanti
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/output%20(6).png"  width="500">
 </p>
+
+
 ---
 
 #### **3.3 Impact of Quantization**
@@ -148,16 +150,16 @@ All aspects of training, quantization, and ONNX conversion are documented in the
 
 The trained models files can be found [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Final%20Report/Trained%20Models), and the ONNX format files can be found [ here ](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/Final%20Report/ONNX%20Models%20files).
 
-
+---
 
 ## 4. Hardware Sides
-### 1. NVDIA Deep Learning Accelerator (NVDLA):
+### 4.1. NVDIA Deep Learning Accelerator (NVDLA):
 
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_flow.png" alt="nvdla overview" title="nvdla overview" width="500">
 </p>
 
-#### Compiler
+#### 4.1.1 Compiler
 Unfortunately, NVIDIA hasn't added support for ONNX models. Currently, it only support Caffe models.
 
 The NVDLA compiler needs the following files from the Caffe models,
@@ -183,7 +185,7 @@ We tried this compilation for multiple online available Caffe models. But, only 
 
 Further details on this can be found [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/compilation).
 
-#### Deployment
+#### 4.1.2 Deployment
 
 There are multiple options available to deploy NVDLA,
 - GreenSocs QBox based Virtual Simulator
@@ -198,7 +200,7 @@ FireSim is still a simulator, but it is accelerated on an FPGA in Amazon EC2 "F1
 
 However, NVIDIA has stopped maintaining these 5-6 years ago.
 
-##### GreenSocs QBox based Virtual Simulator
+##### 4.1.3 GreenSocs QBox based Virtual Simulator
 
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_vp.png" alt="nvdla virtual" title="nvdla virtual" width="500">
@@ -242,7 +244,7 @@ It is easier to run the virtual platform on a docker to avoid these complication
 
 The runtime capabilities in this platform is limited to running the simulation for a single image.
 
-##### Emulation on Amazon EC2 “F1” environment (AWS FPGA)
+##### 4.1.4 Emulation on Amazon EC2 “F1” environment (AWS FPGA)
 
 <p align="center">
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_aws.png" alt="nvdla aws" title="nvdla aws" width="500">
@@ -256,7 +258,7 @@ The runtime capabilities are increased on this platform. We can run hardware reg
   <img src="https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Images/nvdla_results.png" alt="nvdla results" title="nvdla results" width="500">
 </p>
 
-#### Runtime
+#### 4.1.5 Runtime
 
 During runtime, the NVDLA loadable goes through multiple abstraction layers before reaching the NVDLA hardware. They are as follows,
 - User-Mode Driver (UMD) - Loads the loadable and submits inference job to KMD.
@@ -282,7 +284,7 @@ The runtime application can also be changed and built again. We tried this, but 
 
 Further details on this can be found [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/runtime).
 
-#### Results
+#### 4.1.6 Results
 
 Since we deployed only on a virtual simulator platform, we only have results for the single image simulations. These simulations display the execution time on the terminal at the end of the simulations. An output.dimg file will also be created with the output of the model. The execution times we got are as follows,
 
@@ -297,17 +299,17 @@ The ResNet-50 has some improvement when running on INT8 quantized mode, but the 
 
 The terminal outputs of these simulations along with the loadables used are given [here](https://github.com/hplp/ai-hardware-project-6501-group10/tree/main/nvdla/runtime).
 
-#### Conclusion
+#### 4.1.7 Conclusion
 
 The ResNet-50 has some improvement when running on INT8 quantized mode, but the performance has worsened for LeNet. We assumed that this is because LeNet is a very small model and the overhead introduced to the NVDLA by handling a fixed-point quantization outweighs any performance gained by lighter computations. There might also be the possibility that LeNet is even too small to consume all 2048 8-bit MACs available in the ``nv_full`` configuration. ``nv_small`` configuration might be a better fit for the LeNet, but we cannot do this comparison on ``nv_small`` because it doesn't support FP16 precision.
 
 The quantization is handled by the NVDLA compiler itself. So, we can't expect a different output unless we make changes to the NVDLA framework.
 
-#### Future Work
+#### 4.1.8 Future Work
 
 We need to get more reliable results using a hardware implementation on AWS FPGA. However, it still needs a OpenDLA virtual platform to emulate the CPU. We might run into issues because we have limited control over downgrading the software when running on AWS servers.
 
-### 2. Scale-Sim:
+### 4.2 Scale-Sim:
 
 Scale-sim (Systolic CNN Accelerator Simulator) is a lightweight and highly configurable simulator that gives valuable insights into hardware-level performance, enabling efficient testing and deployment of deep neural networks (DNNs) models without access to physical hardware. Below figure illustrates the architecture and workflow of SCALE-Sim. 
 
