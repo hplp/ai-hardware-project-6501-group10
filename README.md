@@ -56,7 +56,6 @@ Repurposing hardware architectures available for CNNs to be used to accelerate s
 
 [Here](https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Final_Project_Report.md)
 
-https://github.com/hplp/ai-hardware-project-6501-group10/blob/main/Final%20Report/Final_Project_Report.md
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Buol6fpg)
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=16990746)
